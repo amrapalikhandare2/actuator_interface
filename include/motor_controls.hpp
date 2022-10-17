@@ -99,8 +99,8 @@ class MotorControls{
 
     bool motor_command(int motor_id, std::string command_type, position_cmd_t position_cmd_element, velocity_cmd_t velocity_cmd_element);
     
-    int set_vel_speed(int axis, uint16_t nodeid, float vel);
-    int set_relative_position(uint16_t node_id,uint32_t position);
+    int set_vel_speed(uint16_t nodeid, int axis, float vel);
+    int set_relative_position(uint16_t node_id, int axis, uint32_t position);
 
     int motor_rpm_to_cps(float rpm);
     int motor_rps2_to_cps2(float rpss);

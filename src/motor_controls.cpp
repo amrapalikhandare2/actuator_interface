@@ -20,7 +20,7 @@ int MotorControls::motor_rps2_to_cps2(float rpss) // RPS2 to 10 counts/sec2 conv
 	return m_cps2;
 }
 
-int MotorControls::set_vel_speed(int axis, uint16_t nodeid, float vel){
+int MotorControls::set_vel_speed(uint16_t nodeid, int axis, float vel){
     int err = 0;
 	const int32_t rpm = motor_rpm_to_cps(axis*vel) ;
 	Socketcan_t target_vel[2] = {
@@ -31,7 +31,7 @@ int MotorControls::set_vel_speed(int axis, uint16_t nodeid, float vel){
 	return err;
 }
 
-int MotorControls::set_relative_position(uint16_t node_id,uint32_t position) {
+int MotorControls::set_relative_position(uint16_t node_id, int axis, uint32_t position) {
 	int err = 0;
 
 	SDO_data d;
@@ -39,7 +39,7 @@ int MotorControls::set_relative_position(uint16_t node_id,uint32_t position) {
 	d.index = 0x607A;
 	d.subindex = 0x00;
 	d.data.size = 4;
-	d.data.data = position;//in milliseconds
+	d.data.data = axis*position;//in milliseconds
 	err |= SDO_write(motor_sockets->motor_cfg_fd, &d);
 
 	md_control_register.control_s.switch_on = 1;
@@ -118,13 +118,22 @@ int MotorControls::set_driving_motor_position_mode_params(uint16_t node_id, doub
 bool MotorControls::motor_command(int motor_id, std::string command_type, position_cmd_t position_cmd_element, velocity_cmd_t velocity_cmd_element){
     
     if (command_type =="velocity"){
+
         int axis=1;
+
         set_driving_motor_position_mode_params(motor_id, velocity_cmd_element.accel, velocity_cmd_element.decel, velocity_cmd_element.max_vel);
-        set_vel_speed(axis, motor_id, velocity_cmd_element.velocity );
+        
+        set_vel_speed(motor_id, axis, velocity_cmd_element.velocity );
 
     }
 
     if (command_type =="position"){
+
+        int axis=1;
+
+        set_driving_motor_position_mode_params(motor_id, position_cmd_element.accel, position_cmd_element.decel, position_cmd_element.max_vel);
+
+        set_relative_position(motor_id, axis, position_cmd_element.relative_pos);
 
     }
 }
