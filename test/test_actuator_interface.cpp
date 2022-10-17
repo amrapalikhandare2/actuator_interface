@@ -43,7 +43,6 @@ Motor::MotorSPtr motor_sockets = std::make_shared<Motor>();
 std::shared_ptr<spdlog::logger>  logger_motors;
 
 int main(int argc, char * argv[]){
-    left_motor_sockets->createSockets(0x12);
-    std::cout<<left_motor_sockets->motor_status_pdo_fd<<std::endl;
+   motor_sockets->motor_init(0x12);
     return 0;
 }

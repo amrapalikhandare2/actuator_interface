@@ -100,7 +100,44 @@ int Motor::motor_config_node(int motor_id){
 	err |= motor_Transmit_PDO_n_Mapping(motor_id, 7, 0, NULL);
 
 }
-    
+
+int Motor::motor_setmode_sdo(uint16_t motor_id, enum Motor_mode mode){
+    int err = 0;
+
+    SDO_data d;
+	d.nodeid = motor_id;
+	d.index = 0x6060;
+	d.subindex = 0x00;
+	d.data.size = 1;
+	d.data.data = mode;
+
+	return SDO_write(motor_sockets->motor_cfg_fd, &d);
+}
+
+int Motor::set_guard_time(uint16_t motor_id, uint16_t value) {
+	SDO_data d;
+	d.nodeid = motor_id;
+	d.index = 0x100C;
+	d.subindex = 0x00;
+	d.data.size = 2;
+	d.data.data = value;
+
+	return SDO_write(motor_sockets->motor_cfg_fd, &d);
+
+}
+
+int Motor::set_life_time_factor(uint16_t motor_id, uint8_t value) {
+	SDO_data d;
+	d.nodeid = motor_id;
+	d.index = 0x100D;
+	d.subindex = 0x00;
+	d.data.size = 1;
+	d.data.data = value;
+
+	return SDO_write(motor_sockets->motor_cfg_fd, &d);
+
+}
+
 bool Motor::motor_init(int motor_id){
     
     int err = 0;
@@ -118,5 +155,13 @@ bool Motor::motor_init(int motor_id){
 	}
 
     //setting default mode
+    err |= motor_setmode_sdo(motor_id,Motor_mode_Velocity);
+	if (err != 0)
+	{
+		return MOTOR_ERROR;
+	}
+
+    set_guard_time(motor_id,50);
+	set_life_time_factor(motor_id,4);
 
 }

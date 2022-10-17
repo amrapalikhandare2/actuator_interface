@@ -62,6 +62,7 @@ target_link_libraries(canopen socketcan)
 add_library(${PROJECT_NAME} SHARED
             src/sockets.cpp
             src/motor.cpp
+            src/motor_controls.cpp
             )
 target_link_libraries(${PROJECT_NAME} canopen socketcan)
 
