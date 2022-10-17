@@ -9,6 +9,13 @@ MotorFeedback::~MotorFeedback(){
     
 }
 
+double MotorFeedback::motor_cps_to_rpm(double counts_per_sec)
+{
+	
+	double m_per_sec = (counts_per_sec) * DRIVING_MOTOR_COUNTS_PER_SEC_TO_RPM;
+	return m_per_sec;
+}
+
 int MotorFeedback::motor_status_n_voltage_read(int motor_id, uint16_t *status, float *battery_vol, int timeout){
     int err;
 	my_can_frame f;
@@ -26,18 +33,15 @@ int MotorFeedback::motor_status_n_voltage_read(int motor_id, uint16_t *status, f
 
 int MotorFeedback::motor_enc_read(int motor_id, int32_t *pos, int timeout)
 {
-
 	int err;
-
 	my_can_frame f;
+    uint32_t enc;
+
 	err = PDO_read(motor_sockets->motor_enc_pdo_fd, &f, timeout);
 
-
-	uint32_t enc;
 	if (f.id == (PDO_TX3_ID + motor_id))
 	{
-
-	//ENCODER COUNT OF LEFT
+	    //ENCODER COUNT
 		enc = ((uint32_t)f.data[0] << 0) | ((uint32_t)f.data[1] << 8) | ((uint32_t)f.data[2] << 16) | ((uint32_t)f.data[3] << 24);
 		//rpm = ((uint32_t)f.data[4]<<0) | ((uint32_t)f.data[5]<<8) | ((uint32_t)f.data[6]<<16) | ((uint32_t)f.data[7]<<24);
 		if (init_enc)
@@ -51,6 +55,44 @@ int MotorFeedback::motor_enc_read(int motor_id, int32_t *pos, int timeout)
 		}
 		//*vel = rpm*0.1;//motor_rpm_to_mmsec(-rpm);
 	}
+
+	return err;
+}
+
+int MotorFeedback::motor_vel_read(int motor_id, double *vel, int timeout)
+{
+	int err;
+	my_can_frame f;
+    int32_t rpm;
+	int32_t register_cps;
+	double cps;
+
+	err = PDO_read(motor_sockets->motor_vel_pdo_fd, &f, timeout);
+	
+	if (f.id == (PDO_TX2_ID + motor_id))
+	{
+	    //RPM OF LEFT 
+		register_cps = ((uint32_t)f.data[0] << 0) | ((uint32_t)f.data[1] << 8) | ((uint32_t)f.data[2] << 16) | ((uint32_t)f.data[3] << 24);
+		cps = register_cps;
+		*vel = (double)motor_cps_to_rpm(cps);
+	}
+
+	return err;
+}
+
+int MotorFeedback::motor_system_status_read(int motor_id, uint32_t *manufacturer_reg, uint32_t *latched_fault, int timeout)
+{
+
+	int err;
+	my_can_frame f;
+	err = PDO_read(motor_sockets->motor_system_status_pdo_fd, &f, timeout);
+
+	if (f.id == (PDO_TX4_ID + motor_id))
+	{
+	    //STATUS OF LEFT MOTOR
+        *manufacturer_reg = ((uint32_t)f.data[0] << 0) | ((uint32_t)f.data[1] << 8) | ((uint32_t)f.data[2] << 16) | ((uint32_t)f.data[3] << 24);
+		*latched_fault = ((uint32_t)f.data[4] << 0) | ((uint32_t)f.data[5] << 8) | ((uint32_t)f.data[6] << 16) | ((uint32_t)f.data[7] << 24);
+    }
 
 	return err;
 }
