@@ -7,6 +7,7 @@
 #include <iostream>
 #include <sockets.hpp>
 #include <motor_params.hpp>
+#include <motor.hpp>
 
 #include "../canopen/canopen.h"
 
@@ -36,6 +37,18 @@ class MotorControls{
         Reset_Fault = 0x80,
     };
 
+    
+
+    public:
+    MotorControls();
+    ~MotorControls();
+
+    typedef std::shared_ptr<MotorControls> MotorControlsSPtr;
+    typedef std::unique_ptr<MotorControls> MotorControlsUPtr;
+
+    Sockets::SocketsSPtr motor_sockets = std::make_shared<Sockets>();
+    Motor::MotorSPtr motor = std::make_shared<Motor>();
+
     enum Motor_mode {
         Motor_mode_Velocity = 3,
         Motor_mode_Position = 1,
@@ -48,15 +61,6 @@ class MotorControls{
         Motor_mode_Master_Encoder_Mode = -5,
         Motor_mode_Step_Direction_Mode = -6
     };
-
-    public:
-    MotorControls();
-    ~MotorControls();
-
-    typedef std::shared_ptr<MotorControls> MotorControlsSPtr;
-    typedef std::unique_ptr<MotorControls> MotorControlsUPtr;
-
-    Sockets::SocketsSPtr motor_sockets = std::make_shared<Sockets>();
 
     typedef struct velocity_cmd_ {
         double timeout;

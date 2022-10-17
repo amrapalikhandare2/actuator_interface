@@ -1,0 +1,51 @@
+{
+    "bot_variant": "bot",
+    "bot": {
+        "accessories": [
+        {
+          "accessory_idx": 1,
+          "accessory_name": "left_front_wheel",
+          "accessory_params": {
+            "phys_params": {
+              "ticks_per_motor_rev": 4096,
+              "wheel_radius": 100,
+              "gearbox_ratio": 1
+            }
+          }
+        },
+        {
+            "accessory_idx": 2,
+            "accessory_name": "right_front_wheel",
+            "accessory_params": {
+              "phys_params": {
+                "ticks_per_motor_rev": 4096,
+                "wheel_radius": 100,
+                "gearbox_ratio": 1
+              }
+            }
+          },
+          {
+            "accessory_idx": 3,
+            "accessory_name": "left_rear_wheel",
+            "accessory_params": {
+              "phys_params": {
+                "ticks_per_motor_rev": 4096,
+                "wheel_radius": 100,
+                "gearbox_ratio": 1
+              }
+            }
+          },
+          {
+            "accessory_idx": 4,
+            "accessory_name": "right_rear_wheel",
+            "accessory_params": {
+              "phys_params": {
+                "ticks_per_motor_rev": 4096,
+                "wheel_radius": 100,
+                "gearbox_ratio": 1
+              }
+            }
+          }
+        ]
+    }
+}
