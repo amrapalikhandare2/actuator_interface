@@ -31,7 +31,7 @@ int MotorFeedback::motor_status_n_voltage_read(int motor_id, uint16_t *status, f
 
 }
 
-int MotorFeedback::motor_enc_read(int motor_id, int32_t *pos, int timeout)
+int MotorFeedback::motor_enc_read(int motor_id, uint32_t *pos, int timeout)
 {
 	int err;
 	my_can_frame f;

@@ -121,6 +121,7 @@ bool MotorControls::motor_command(int motor_id, std::string command_type, positi
 
         int axis=1;
         
+        // motor->mot
         set_driving_motor_position_mode_params(motor_id, velocity_cmd_element.accel, velocity_cmd_element.decel, velocity_cmd_element.max_vel);
         
         set_vel_speed(motor_id, axis, velocity_cmd_element.velocity );
