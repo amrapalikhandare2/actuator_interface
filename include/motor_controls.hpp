@@ -51,15 +51,7 @@ class MotorControls{
 
     enum Motor_mode {
         Motor_mode_Velocity = 3,
-        Motor_mode_Position = 1,
-            Motor_mode_Interpolated_Position_Mode = 7,
-        Motor_mode_Homing_Mode = 6,
-            Motor_mode_Position_Mode = -1,
-        Motor_mode_Velocity_Mode = -2,
-        Motor_mode_Current_Mode = -3,
-        Motor_mode_Diagnostic_Mode = -4,
-        Motor_mode_Master_Encoder_Mode = -5,
-        Motor_mode_Step_Direction_Mode = -6
+        Motor_mode_Position = 1
     };
 
     typedef struct velocity_cmd_ {
@@ -101,6 +93,8 @@ class MotorControls{
     // velocity_cmd_t velocity_cmd_element;
     // position_cmd_t position_cmd_element;
 
+    
+    int motor_setmode_sdo(uint16_t motor_id, enum Motor_mode mode);
     bool motor_command(int motor_id, std::string command_type, position_cmd_t position_cmd_element, velocity_cmd_t velocity_cmd_element);
     
     int set_vel_speed(uint16_t nodeid, int axis, float vel);

@@ -121,7 +121,7 @@ bool MotorControls::motor_command(int motor_id, std::string command_type, positi
 
         int axis=1;
         
-        // motor->mot
+        motor_setmode_sdo(motor_id, Motor_mode_Velocity);
         set_driving_motor_position_mode_params(motor_id, velocity_cmd_element.accel, velocity_cmd_element.decel, velocity_cmd_element.max_vel);
         
         set_vel_speed(motor_id, axis, velocity_cmd_element.velocity );
@@ -131,6 +131,7 @@ bool MotorControls::motor_command(int motor_id, std::string command_type, positi
     if (command_type =="position"){
 
         int axis=1;
+		motor_setmode_sdo(motor_id, Motor_mode_Position);
 
         set_driving_motor_position_mode_params(motor_id, position_cmd_element.accel, position_cmd_element.decel, position_cmd_element.max_vel);
 
@@ -138,4 +139,16 @@ bool MotorControls::motor_command(int motor_id, std::string command_type, positi
 
     }
 }
-    
+
+int MotorControls::motor_setmode_sdo(uint16_t motor_id, enum Motor_mode mode){
+    int err = 0;
+
+    SDO_data d;
+	d.nodeid = motor_id;
+	d.index = 0x6060;
+	d.subindex = 0x00;
+	d.data.size = 1;
+	d.data.data = mode;
+
+	return SDO_write(motor_sockets->motor_cfg_fd, &d);
+}

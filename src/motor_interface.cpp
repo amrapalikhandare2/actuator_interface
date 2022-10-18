@@ -20,6 +20,11 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
     left_rear_motor_->motor_init(0x0E);
     right_rear_motor_->motor_init(0x0F);
 
+    left_front_motor_->motor_enable(0x0C);
+    right_front_motor_->motor_enable(0x0D);
+    left_rear_motor_->motor_enable(0x0E);
+    right_rear_motor_->motor_enable(0x0F);
+
 
     
 }
