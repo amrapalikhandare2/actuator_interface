@@ -3,6 +3,7 @@
 
 #include <motor_params.hpp>
 #include <motor.hpp>
+#include <motor_controls.hpp>
 #include <rclcpp/rclcpp.hpp>
 
 using std::placeholders::_1;

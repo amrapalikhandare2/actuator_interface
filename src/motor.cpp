@@ -165,3 +165,22 @@ bool Motor::motor_init(int motor_id){
 	set_life_time_factor(motor_id,4);
 
 }
+
+int Motor::motor_enable(int motor_id)
+{
+	int err = 0;
+	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, CANOPEN_BROADCAST_ID, NMT_Enter_PreOperational);
+
+	SDO_data d;
+	d.nodeid = motor_id;
+	d.index = 0x6040;
+	d.subindex = 0x00;
+	d.data.size = 2;
+	d.data.data = Shutdown;
+
+	err |= SDO_write(motor_sockets->motor_cfg_fd, &d);
+
+	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, CANOPEN_BROADCAST_ID, NMT_Start_Node);
+
+	return err;
+}

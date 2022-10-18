@@ -25,14 +25,19 @@ class Motor{
     enum Motor_mode {
         Motor_mode_Velocity = 3,
         Motor_mode_Position = 1,
-            Motor_mode_Interpolated_Position_Mode = 7,
-        Motor_mode_Homing_Mode = 6,
-            Motor_mode_Position_Mode = -1,
-        Motor_mode_Velocity_Mode = -2,
-        Motor_mode_Current_Mode = -3,
-        Motor_mode_Diagnostic_Mode = -4,
-        Motor_mode_Master_Encoder_Mode = -5,
-        Motor_mode_Step_Direction_Mode = -6
+        
+    };
+
+    enum Epos_ctrl {
+        Shutdown = 0x06,
+        Switch_On = 0x07,
+        Switch_On_And_Enable_Operation = 0x0f,
+        Disable_Voltage = 0x00,
+        Quickstop = 0x02,
+        Disable_Operation = 0x07,
+        Enable_Operation = 0x0f,
+        Position_Trigger = 0x5f,
+        Reset_Fault = 0x80,
     };
 
     public:
@@ -48,6 +53,7 @@ class Motor{
     int motor_setmode_sdo(uint16_t motor_id, enum Motor_mode mode);
     int set_guard_time(uint16_t motor_id, uint16_t value);
     int set_life_time_factor(uint16_t motor_id, uint8_t value);
+    int motor_enable(int motor_id);
 
     Sockets::SocketsSPtr motor_sockets = std::make_shared<Sockets>();
     
