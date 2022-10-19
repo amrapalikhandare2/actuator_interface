@@ -116,14 +116,18 @@ int MotorControls::set_driving_motor_position_mode_params(uint16_t node_id, doub
 }
 
 bool MotorControls::motor_command(int motor_id, std::string command_type, position_cmd_t position_cmd_element, velocity_cmd_t velocity_cmd_element){
+    std::cout << "motor command" << std::endl;
     
     if (command_type =="velocity"){
 
         int axis=1;
+        std::cout << "motor mode" << std::endl;
+        
         
         motor_setmode_sdo(motor_id, Motor_mode_Velocity);
+        std::cout << "motor mode params" << std::endl;
         set_driving_motor_position_mode_params(motor_id, velocity_cmd_element.accel, velocity_cmd_element.decel, velocity_cmd_element.max_vel);
-        
+        std::cout << "vel" << std::endl;
         set_vel_speed(motor_id, axis, velocity_cmd_element.velocity );
 
     }

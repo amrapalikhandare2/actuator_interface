@@ -5,7 +5,7 @@
 #include <motor.hpp>
 #include <motor_controls.hpp>
 #include <rclcpp/rclcpp.hpp>
-
+#include <iostream>
 using std::placeholders::_1;
 
 class MotorInterface: public rclcpp::Node {

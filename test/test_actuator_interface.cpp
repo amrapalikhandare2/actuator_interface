@@ -48,8 +48,9 @@ std::shared_ptr<spdlog::logger>  logger_motors;
 int main(int argc, char * argv[]){
 
     rclcpp::init(argc, argv);
+    std::cout << "in interface initialization.." << std::endl;
     std::shared_ptr<MotorInterface> node;
-    
+    node = std::make_shared<MotorInterface>();
     rclcpp::executors::MultiThreadedExecutor executor;
     executor.add_node(node);
 
@@ -68,7 +69,8 @@ int main(int argc, char * argv[]){
     .accel=1,
     .decel=1
     };
-    motor_controls_->motor_command(0x0C, "velocity", position_cmd_element_, velocity_cmd_element_);
+    //std::cout << "sending velocity" << std::endl;
+    //motor_controls_->motor_command(0x0C, "velocity", position_cmd_element_, velocity_cmd_element_);
 
     while(rclcpp::ok()) {
         executor.spin_some();
