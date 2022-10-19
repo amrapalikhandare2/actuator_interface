@@ -40,7 +40,7 @@
 // ConfigParser::ConfigParserSPtr config_parser = std::make_shared<ConfigParser>();
 // Sockets::SocketsSPtr left_motor_sockets = std::make_shared<Sockets>();
 // Motor::MotorSPtr motor_sockets = std::make_shared<Motor>();
-// MotorControls::MotorControlsSPtr motor_controls_ = std::make_shared<MotorControls>();
+MotorControls::MotorControlsSPtr motor_controls_ ;
 // ############################ Namespace ##########################
 
 std::shared_ptr<spdlog::logger>  logger_motors;
@@ -68,7 +68,7 @@ int main(int argc, char * argv[]){
     .accel=1,
     .decel=1
     };
-    // motor_controls_->motor_command(0x0C, "velocity", position_cmd_element_, velocity_cmd_element_);
+    motor_controls_->motor_command(0x0C, "velocity", position_cmd_element_, velocity_cmd_element_);
 
     while(rclcpp::ok()) {
         executor.spin_some();
