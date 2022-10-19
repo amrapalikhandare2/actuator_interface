@@ -41,7 +41,7 @@ class Motor{
     };
 
     public:
-    Motor();
+    Motor(Sockets::SocketsSPtr motor_sockets_);
     ~Motor();
     typedef std::shared_ptr<Motor> MotorSPtr;
     typedef std::unique_ptr<Motor> MotorUPtr;

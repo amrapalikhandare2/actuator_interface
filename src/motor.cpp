@@ -1,8 +1,9 @@
 #include <motor.hpp>
 #include <sockets.hpp>
 
-Motor::Motor(){
-	motor_sockets = std::make_shared<Sockets>(motor_id);
+Motor::Motor(Sockets::SocketsSPtr motor_sockets_){
+	// motor_sockets = std::make_shared<Sockets>(motor_id);
+	motor_sockets = motor_sockets_;
     
 }
 
