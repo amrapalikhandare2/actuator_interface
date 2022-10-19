@@ -19,13 +19,13 @@ class MotorFeedback{
     uint32_t err_enc = 0; 
 
     public:
-    MotorFeedback();
+    MotorFeedback(Sockets::SocketsSPtr motor_sockets_);
     ~MotorFeedback();
 
     typedef std::shared_ptr<MotorFeedback> MotorFeedbackSPtr;
     typedef std::unique_ptr<MotorFeedback> MotorFeedbackUPtr;
 
-    Sockets::SocketsSPtr motor_sockets = std::make_shared<Sockets>();
+    Sockets::SocketsSPtr motor_sockets;
 
     int motor_status_n_voltage_read(int motor_id, uint16_t *status, float *battery_vol, int timeout);
     int motor_enc_read(int motor_id, uint32_t *pos, int timeout);

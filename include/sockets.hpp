@@ -18,7 +18,7 @@ class Sockets{
     std::shared_ptr<spdlog::logger> logger_;
 
     public:
-    Sockets();
+    Sockets(int motor_id);
     ~Sockets();
 
     bool createSockets(int motor_id);

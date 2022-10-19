@@ -46,6 +46,7 @@ class Motor{
     typedef std::shared_ptr<Motor> MotorSPtr;
     typedef std::unique_ptr<Motor> MotorUPtr;
 
+    Sockets::SocketsSPtr motor_sockets;
     bool motor_init(int motor_id);
     int motor_config_node(int motor_id);
     int motor_Transmit_PDO_n_Parameter(uint16_t node_id, uint8_t n, uint32_t cob);
@@ -54,8 +55,6 @@ class Motor{
     int set_guard_time(uint16_t motor_id, uint16_t value);
     int set_life_time_factor(uint16_t motor_id, uint8_t value);
     int motor_enable(int motor_id);
-
-    Sockets::SocketsSPtr motor_sockets = std::make_shared<Sockets>();
     
 };
 

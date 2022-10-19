@@ -2,6 +2,7 @@
 #include <sockets.hpp>
 
 Motor::Motor(){
+	motor_sockets = std::make_shared<Sockets>(motor_id);
     
 }
 
