@@ -1,7 +1,7 @@
 #include <motor_controls.hpp>
 
-MotorControls::MotorControls(){
-    
+MotorControls::MotorControls(Sockets::SocketsSPtr motor_sockets_){
+    motor_sockets = motor_sockets_;
 }
 
 MotorControls::~MotorControls(){

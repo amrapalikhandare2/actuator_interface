@@ -1,7 +1,7 @@
 #include <sockets.hpp>
 
-Sockets::Sockets(){
-    
+Sockets::Sockets(int motor_id){
+    createSockets(motor_id);
 }
 
 Sockets::~Sockets(){

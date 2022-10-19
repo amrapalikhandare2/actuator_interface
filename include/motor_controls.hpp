@@ -40,14 +40,13 @@ class MotorControls{
     
 
     public:
-    MotorControls();
+    MotorControls(Sockets::SocketsSPtr motor_sockets_);
     ~MotorControls();
 
     typedef std::shared_ptr<MotorControls> MotorControlsSPtr;
     typedef std::unique_ptr<MotorControls> MotorControlsUPtr;
 
-    Sockets::SocketsSPtr motor_sockets = std::make_shared<Sockets>();
-    Motor::MotorSPtr motor = std::make_shared<Motor>();
+    Sockets::SocketsSPtr motor_sockets;
 
     enum Motor_mode {
         Motor_mode_Velocity = 3,

@@ -1,8 +1,8 @@
 #include <motor_feedback.hpp>
 
 
-MotorFeedback::MotorFeedback(){
-    
+MotorFeedback::MotorFeedback(Sockets::SocketsSPtr motor_sockets_){
+    motor_sockets = motor_sockets_ ;
 }
 
 MotorFeedback::~MotorFeedback(){
