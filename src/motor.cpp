@@ -216,5 +216,15 @@ bool Motor::motorFeedback(int motor_id, MotorFeedback::feedback_s feedback_s_m){
 	feedback_s_m_.manufacturer_reg_m = manufacturer_reg_fb_[0];
 	feedback_s_m_.latched_fault_m = latched_fault_fb_[0];
 	
+	
+	
+	feedback_s_m = feedback_s_m_;
+	std::cout << "Motor Status: " << feedback_s_m.status_m<< std::endl;
+    	std::cout << "Battery Voltage: " << feedback_s_m.battery_vol_m<< std::endl;
+    	std::cout << "Motor Position: " << feedback_s_m.pos_m<< std::endl;
+    	std::cout << "Motor Velocity: " << feedback_s_m.vel_m<< std::endl;
+    	std::cout << "Motor Manufactuer Register: " << feedback_s_m.manufacturer_reg_m<< std::endl;
+    	std::cout << "Motor Latched Fault: " << feedback_s_m.latched_fault_m<< std::endl;
+	
 }
 

@@ -12,21 +12,21 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
     left_front_motor_ = std::make_shared<Motor>(left_front_motor_sockets_);
     right_front_motor_ = std::make_shared<Motor>(right_front_motor_sockets_);
 
-    std::cout <<"sleep" << std::endl;
+    std::cout <<"sleep1" << std::endl;
     sleep(2);
     left_front_motor_->motor_init(0x0C);
     std::cout <<"sleep" << std::endl;
     sleep(2);
-    right_front_motor_->motor_init(0x0D);
-    std::cout <<"sleep" << std::endl;
-    sleep(2);
+    //right_front_motor_->motor_init(0x0D);
+    //std::cout <<"sleep" << std::endl;
+    //sleep(2);
 
     left_front_motor_->motor_enable(0x0C);
     std::cout <<"sleep" << std::endl;
     sleep(2);
-    right_front_motor_->motor_enable(0x0D);
-    std::cout <<"sleep" << std::endl;
-    sleep(2);
+    //right_front_motor_->motor_enable(0x0D);
+    //std::cout <<"sleep" << std::endl;
+    //sleep(2);
 
     MotorControls::position_cmd_t position_cmd_element_;
     MotorControls::velocity_cmd_t velocity_cmd_element_;
@@ -40,7 +40,7 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
 
     velocity_cmd_element_ = {.timeout =10,
     .velocity=15,
-    .max_vel=20,
+    .max_vel=10,
     .accel=1,
     .decel=1
     };
