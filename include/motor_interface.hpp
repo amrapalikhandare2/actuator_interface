@@ -3,7 +3,7 @@
 
 #include <motor_params.hpp>
 #include <motor.hpp>
-#include <motor_controls.hpp>
+// #include <motor_controls.hpp>
 #include <rclcpp/rclcpp.hpp>
 #include <iostream>
 using std::placeholders::_1;
@@ -21,19 +21,15 @@ class MotorInterface: public rclcpp::Node {
 
     Sockets::SocketsSPtr left_front_motor_sockets_ ;
     Sockets::SocketsSPtr right_front_motor_sockets_ ;
-    Sockets::SocketsSPtr left_rear_motor_sockets_ ;
-    Sockets::SocketsSPtr right_rear_motor_sockets_ ;
+    // Sockets::SocketsSPtr left_rear_motor_sockets_ ;
+    // Sockets::SocketsSPtr right_rear_motor_sockets_ ;
 
     Motor::MotorSPtr left_front_motor_ ;
     Motor::MotorSPtr right_front_motor_ ;
-    Motor::MotorSPtr left_rear_motor_ ;
-    Motor::MotorSPtr right_rear_motor_ ;
+    // Motor::MotorSPtr left_rear_motor_ ;
+    // Motor::MotorSPtr right_rear_motor_ ;
 
-    MotorControls::MotorControlsSPtr left_front_motor_controls_ ;
-    MotorControls::MotorControlsSPtr right_front_motor_controls_ ;
-    MotorControls::MotorControlsSPtr left_rear_motor_controls_ ;
-    MotorControls::MotorControlsSPtr right_rear_motor_controls_ ;
-
+    MotorFeedback::feedback_s feedback_s_l_m_;
 
     // Read loop
     rclcpp::TimerBase::SharedPtr timer_;

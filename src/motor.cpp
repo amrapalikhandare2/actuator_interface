@@ -1,9 +1,11 @@
 #include <motor.hpp>
-#include <sockets.hpp>
+
 
 Motor::Motor(Sockets::SocketsSPtr motor_sockets_){
 	// motor_sockets = std::make_shared<Sockets>(motor_id);
 	motor_sockets = motor_sockets_;
+	motor_controls = std::make_shared<MotorControls>(motor_sockets_);
+    motor_feedback = std::make_shared<MotorFeedback>(motor_sockets_);
     
 }
 
@@ -186,3 +188,24 @@ int Motor::motor_enable(int motor_id)
 
 	return err;
 }
+
+//***
+bool Motor::motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element){
+	motor_controls->motor_command(motor_id, command_type, position_cmd_element, velocity_cmd_element);
+}
+
+bool Motor::motorFeedback(int motor_id, MotorFeedback::feedback_s feedback_s_m){
+	
+	motor_feedback->motor_status_n_voltage_read(motor_id, status_register_fb_, battery_vol_fb_, 1);
+	motor_feedback->motor_enc_read(motor_id, encoder_fb_, 1);
+	motor_feedback->motor_vel_read(motor_id, vel_fb_, 1);
+	motor_feedback->motor_system_status_read(motor_id, manufacturer_reg_fb_, latched_fault_fb_, 1);
+	feedback_s_m_.status_m = status_register_fb_[0];
+	feedback_s_m_.battery_vol_m = battery_vol_fb_[0];
+	feedback_s_m_.pos_m = encoder_fb_[0];
+	feedback_s_m_.vel_m = vel_fb_[0];
+	feedback_s_m_.manufacturer_reg_m = manufacturer_reg_fb_[0];
+	feedback_s_m_.latched_fault_m = latched_fault_fb_[0];
+	
+}
+

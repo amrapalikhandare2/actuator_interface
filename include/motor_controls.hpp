@@ -7,9 +7,7 @@
 #include <iostream>
 #include <sockets.hpp>
 #include <motor_params.hpp>
-#include <motor.hpp>
 
-#include "../canopen/canopen.h"
 
 class MotorControls{
 

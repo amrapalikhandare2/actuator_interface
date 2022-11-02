@@ -8,6 +8,9 @@
 
 #include "../canopen/canopen.h"
 #include <sockets.hpp>
+#include <motor_controls.hpp>
+#include <motor_feedback.hpp>
+
 # define MOTOR_ERROR (-1)
 
 class Motor{
@@ -47,6 +50,11 @@ class Motor{
     typedef std::unique_ptr<Motor> MotorUPtr;
 
     Sockets::SocketsSPtr motor_sockets;
+    
+    MotorControls::MotorControlsSPtr motor_controls;
+    MotorFeedback::MotorFeedbackSPtr motor_feedback;
+
+
     bool motor_init(int motor_id);
     int motor_config_node(int motor_id);
     int motor_Transmit_PDO_n_Parameter(uint16_t node_id, uint8_t n, uint32_t cob);
@@ -55,7 +63,24 @@ class Motor{
     int set_guard_time(uint16_t motor_id, uint16_t value);
     int set_life_time_factor(uint16_t motor_id, uint8_t value);
     int motor_enable(int motor_id);
+
+    //***Motor Control***///
+    // MotorControls::position_cmd_t position_cmd_element_;
+    // MotorControls::velocity_cmd_t velocity_cmd_element_;
+
+    bool motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element);
     
+    uint16_t status_register_fb_[1] = {0};
+    float battery_vol_fb_[1] = {0};
+    uint32_t encoder_fb_[1] = {0};
+    double vel_fb_[1] = {0};
+    uint32_t manufacturer_reg_fb_[1] = {0};
+    uint32_t latched_fault_fb_[1] = {0};
+
+    MotorFeedback::feedback_s feedback_s_m_ = {0};
+    bool motorFeedback(int motor_id, MotorFeedback::feedback_s feedback_s_m);
+    
+        
 };
 
 #endif

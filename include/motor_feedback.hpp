@@ -27,6 +27,17 @@ class MotorFeedback{
 
     Sockets::SocketsSPtr motor_sockets;
 
+    typedef struct feedback_ {
+        uint16_t status_m; 
+        float battery_vol_m;
+        uint32_t pos_m; // position loop params
+        double vel_m;
+        uint32_t manufacturer_reg_m;
+        uint32_t latched_fault_m;
+    }feedback_s;
+
+
+
     int motor_status_n_voltage_read(int motor_id, uint16_t *status, float *battery_vol, int timeout);
     int motor_enc_read(int motor_id, uint32_t *pos, int timeout);
     double motor_cps_to_rpm(double counts_per_sec);
