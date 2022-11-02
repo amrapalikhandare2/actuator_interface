@@ -32,7 +32,10 @@ class MotorInterface: public rclcpp::Node {
     MotorFeedback::feedback_s feedback_s_l_m_;
 
     // Read loop
-    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr read_timer_;
+    rclcpp::TimerBase::SharedPtr data_request_timer_;
+
+    void requestMotorData();
     void readMotorData();
   
 };

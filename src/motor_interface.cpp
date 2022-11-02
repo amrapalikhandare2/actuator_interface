@@ -3,7 +3,8 @@
 
 MotorInterface::MotorInterface() : Node("motor_interface"){
 
-    timer_ = this->create_wall_timer(std::chrono::milliseconds(20), std::bind(&MotorInterface::readMotorData, this));
+    read_timer_ = this->create_wall_timer(std::chrono::milliseconds(20), std::bind(&MotorInterface::readMotorData, this));
+    data_request_timer_ = this->create_wall_timer(std::chrono::milliseconds(10), std::bind(&MotorInterface::requestMotorData, this));
     
     left_front_motor_sockets_ = std::make_shared<Sockets>(0x0C);
     right_front_motor_sockets_ = std::make_shared<Sockets>(0x0D);
@@ -43,13 +44,19 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
     .accel=1,
     .decel=1
     };
-    // std::cout << "sending velocity" << std::endl;
+    std::cout << "sending velocity" << std::endl;
 
     left_front_motor_->motorCommand(0x0C, "velocity", position_cmd_element_, velocity_cmd_element_);
 
 }
 
 MotorInterface::~MotorInterface(){
+
+}
+
+void MotorInterface::requestMotorData(){
+    left_front_motor_->motor_request();
+
 
 }
 

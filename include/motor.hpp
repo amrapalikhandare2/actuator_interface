@@ -63,6 +63,7 @@ class Motor{
     int set_guard_time(uint16_t motor_id, uint16_t value);
     int set_life_time_factor(uint16_t motor_id, uint8_t value);
     int motor_enable(int motor_id);
+    int motor_request(void);
 
     //***Motor Control***///
     // MotorControls::position_cmd_t position_cmd_element_;
@@ -79,7 +80,6 @@ class Motor{
 
     MotorFeedback::feedback_s feedback_s_m_ = {0};
     bool motorFeedback(int motor_id, MotorFeedback::feedback_s feedback_s_m);
-    
         
 };
 
