@@ -18,7 +18,7 @@ class Motor{
     private:
     std::string motor_name;
     int motor_id;
-    std::shared_ptr<spdlog::logger> logger_;
+    
     typedef struct {
         uint16_t index;
         uint8_t subindex;
@@ -53,6 +53,8 @@ class Motor{
     
     MotorControls::MotorControlsSPtr motor_controls;
     MotorFeedback::MotorFeedbackSPtr motor_feedback;
+    
+    std::shared_ptr<spdlog::logger> logger_;
 
 
     bool motor_init(int motor_id);

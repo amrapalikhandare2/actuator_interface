@@ -2,6 +2,7 @@
 
 MotorControls::MotorControls(Sockets::SocketsSPtr motor_sockets_){
     motor_sockets = motor_sockets_;
+    logger_ = spdlog::get("actuator_interface")->clone("motor_controls");
 }
 
 MotorControls::~MotorControls(){
@@ -116,7 +117,7 @@ int MotorControls::set_driving_motor_position_mode_params(uint16_t node_id, doub
 }
 
 bool MotorControls::motor_command(int motor_id, std::string command_type, position_cmd_t position_cmd_element, velocity_cmd_t velocity_cmd_element){
-    std::cout << "motor command" << std::endl;
+    logger_->info("Motor Sockets ptr in motor controls : {}", motor_sockets);
     
     if (command_type =="velocity"){
 

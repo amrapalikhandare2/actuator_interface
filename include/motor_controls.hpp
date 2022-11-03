@@ -15,7 +15,7 @@ class MotorControls{
     std::string motor_name;
     int motor_id;
     int motor_axis;
-    std::shared_ptr<spdlog::logger> logger_;
+    
 
     typedef struct {
         uint16_t index;
@@ -45,6 +45,8 @@ class MotorControls{
     typedef std::unique_ptr<MotorControls> MotorControlsUPtr;
 
     Sockets::SocketsSPtr motor_sockets;
+    
+    std::shared_ptr<spdlog::logger> logger_;
 
     enum Motor_mode {
         Motor_mode_Velocity = 3,

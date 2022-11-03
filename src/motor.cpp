@@ -3,6 +3,10 @@
 
 Motor::Motor(Sockets::SocketsSPtr motor_sockets_){
 	// motor_sockets = std::make_shared<Sockets>(motor_id);
+	
+	logger_ = spdlog::get("actuator_interface")->clone("motor");
+	
+	logger_->info("Motor Sockets ptr in motor constructor: {}", motor_sockets_);
 	motor_sockets = motor_sockets_;
 	motor_controls = std::make_shared<MotorControls>(motor_sockets_);
     motor_feedback = std::make_shared<MotorFeedback>(motor_sockets_);
@@ -145,8 +149,9 @@ int Motor::set_life_time_factor(uint16_t motor_id, uint8_t value) {
 bool Motor::motor_init(int motor_id){
     
     int err = 0;
+    logger_->info("Motor Sockets ptr in init: {}", motor_sockets);
 
-    err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, CANOPEN_BROADCAST_ID, NMT_Enter_PreOperational);
+    err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
 	if (err != 0)
 	{
 		return MOTOR_ERROR;
@@ -173,7 +178,7 @@ bool Motor::motor_init(int motor_id){
 int Motor::motor_enable(int motor_id)
 {
 	int err = 0;
-	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, CANOPEN_BROADCAST_ID, NMT_Enter_PreOperational);
+	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
 
 	SDO_data d;
 	d.nodeid = motor_id;
@@ -184,7 +189,7 @@ int Motor::motor_enable(int motor_id)
 
 	err |= SDO_write(motor_sockets->motor_cfg_fd, &d);
 
-	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, CANOPEN_BROADCAST_ID, NMT_Start_Node);
+	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Start_Node);
 
 	return err;
 }
