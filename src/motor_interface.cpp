@@ -28,6 +28,8 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
     std::cout <<"sleep5" << std::endl;
     sleep(2);
 
+    initialization_done = true;
+
     MotorControls::position_cmd_t position_cmd_element_;
     MotorControls::velocity_cmd_t velocity_cmd_element_;
     
@@ -56,19 +58,24 @@ MotorInterface::~MotorInterface(){
 }
 
 void MotorInterface::requestMotorData(){
-    left_front_motor_->motor_request();
+    if (initialization_done){
+
+        left_front_motor_->motor_request();
+    }
 
 
 }
 
 void MotorInterface::readMotorData(){
-    left_front_motor_->motorFeedback(0x0C, &feedback_s_l_m_);
-    std::cout << "Motor Status: " << feedback_s_l_m_.status_m<< std::endl;
-    std::cout << "Battery Voltage: " << feedback_s_l_m_.battery_vol_m<< std::endl;
-    std::cout << "Motor Position: " << feedback_s_l_m_.pos_m<< std::endl;
-    std::cout << "Motor Velocity: " << feedback_s_l_m_.vel_m<< std::endl;
-    std::cout << "Motor Manufactuer Register: " << feedback_s_l_m_.manufacturer_reg_m<< std::endl;
-    std::cout << "Motor Latched Fault: " << feedback_s_l_m_.latched_fault_m<< std::endl;
+    if (initialization_done){
+        left_front_motor_->motorFeedback(0x0C, &feedback_s_l_m_);
+        std::cout << "Motor Status: " << feedback_s_l_m_.status_m<< std::endl;
+        std::cout << "Battery Voltage: " << feedback_s_l_m_.battery_vol_m<< std::endl;
+        std::cout << "Motor Position: " << feedback_s_l_m_.pos_m<< std::endl;
+        std::cout << "Motor Velocity: " << feedback_s_l_m_.vel_m<< std::endl;
+        std::cout << "Motor Manufactuer Register: " << feedback_s_l_m_.manufacturer_reg_m<< std::endl;
+        std::cout << "Motor Latched Fault: " << feedback_s_l_m_.latched_fault_m<< std::endl;
+        }
     
 
     

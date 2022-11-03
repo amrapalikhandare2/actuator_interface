@@ -37,6 +37,8 @@ class MotorInterface: public rclcpp::Node {
 
     void requestMotorData();
     void readMotorData();
+
+    bool initialization_done= false;
   
 };
 
