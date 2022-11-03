@@ -43,11 +43,22 @@
 // MotorControls::MotorControlsSPtr motor_controls_ ;
 // ############################ Namespace ##########################
 
-std::shared_ptr<spdlog::logger>  logger_motors;
+// std::shared_ptr<spdlog::logger>  logger_motors;
 
 int main(int argc, char * argv[]){
 
     rclcpp::init(argc, argv);
+
+    spdlog::init_thread_pool(8192, 1);
+    auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt >();
+    console_sink->set_level(spdlog::level::info);
+    auto rotating_sink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>("/data/logs/robot_logs/actuator_interface_logs/motor_interface_logs.txt", 1024*1024*100, 3);
+    rotating_sink->set_level(spdlog::level::debug);
+    std::vector<spdlog::sink_ptr> sinks {console_sink,rotating_sink};
+    auto root_logger = std::make_shared<spdlog::async_logger>("actuator_interface", sinks.begin(), sinks.end(), spdlog::thread_pool(), spdlog::async_overflow_policy::block);
+    root_logger->set_level(spdlog::level::debug);
+    spdlog::register_logger(root_logger);
+
     std::cout << "in interface initialization.." << std::endl;
     std::shared_ptr<MotorInterface> node;
     node = std::make_shared<MotorInterface>();

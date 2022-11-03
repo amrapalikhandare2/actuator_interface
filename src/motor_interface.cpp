@@ -3,6 +3,8 @@
 
 MotorInterface::MotorInterface() : Node("motor_interface"){
 
+    logger_ = spdlog::get("actuator_interface")->clone("motor_interface");
+
     read_timer_ = this->create_wall_timer(std::chrono::milliseconds(20), std::bind(&MotorInterface::readMotorData, this));
     data_request_timer_ = this->create_wall_timer(std::chrono::milliseconds(10), std::bind(&MotorInterface::requestMotorData, this));
     
@@ -47,6 +49,7 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
     .decel=1
     };
     std::cout << "sending velocity" << std::endl;
+    logger_->debug("sending velocity");
 
     left_front_motor_->motorCommand(0x0C, "velocity", position_cmd_element_, velocity_cmd_element_);
     right_front_motor_->motorCommand(0x0D, "velocity", position_cmd_element_, velocity_cmd_element_);

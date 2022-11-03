@@ -6,6 +6,7 @@
 // #include <motor_controls.hpp>
 #include <rclcpp/rclcpp.hpp>
 #include <iostream>
+#include <spdlog/spdlog.h>
 using std::placeholders::_1;
 
 class MotorInterface: public rclcpp::Node {
@@ -30,6 +31,8 @@ class MotorInterface: public rclcpp::Node {
     // Motor::MotorSPtr right_rear_motor_ ;
 
     MotorFeedback::feedback_s feedback_s_l_m_;
+    std::shared_ptr<spdlog::logger> logger_;
+    
 
     // Read loop
     rclcpp::TimerBase::SharedPtr read_timer_;
@@ -38,7 +41,7 @@ class MotorInterface: public rclcpp::Node {
     void requestMotorData();
     void readMotorData();
 
-    bool initialization_done= false;
+    bool initialization_done = false;
   
 };
 
