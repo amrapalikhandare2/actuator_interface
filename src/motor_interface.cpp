@@ -61,7 +61,7 @@ void MotorInterface::requestMotorData(){
 }
 
 void MotorInterface::readMotorData(){
-    left_front_motor_->motorFeedback(0x0C, feedback_s_l_m_);
+    left_front_motor_->motorFeedback(0x0C, &feedback_s_l_m_);
     std::cout << "Motor Status: " << feedback_s_l_m_.status_m<< std::endl;
     std::cout << "Battery Voltage: " << feedback_s_l_m_.battery_vol_m<< std::endl;
     std::cout << "Motor Position: " << feedback_s_l_m_.pos_m<< std::endl;

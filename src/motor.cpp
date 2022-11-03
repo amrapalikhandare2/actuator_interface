@@ -203,28 +203,19 @@ bool Motor::motorCommand(int motor_id, std::string command_type, MotorControls::
 	motor_controls->motor_command(motor_id, command_type, position_cmd_element, velocity_cmd_element);
 }
 
-bool Motor::motorFeedback(int motor_id, MotorFeedback::feedback_s feedback_s_m){
+bool Motor::motorFeedback(int motor_id, MotorFeedback::feedback_s *feedback_s_m){
 	
 	motor_feedback->motor_status_n_voltage_read(motor_id, status_register_fb_, battery_vol_fb_, 1);
 	motor_feedback->motor_enc_read(motor_id, encoder_fb_, 1);
 	motor_feedback->motor_vel_read(motor_id, vel_fb_, 1);
 	motor_feedback->motor_system_status_read(motor_id, manufacturer_reg_fb_, latched_fault_fb_, 1);
-	feedback_s_m_.status_m = status_register_fb_[0];
-	feedback_s_m_.battery_vol_m = battery_vol_fb_[0];
-	feedback_s_m_.pos_m = encoder_fb_[0];
-	feedback_s_m_.vel_m = vel_fb_[0];
-	feedback_s_m_.manufacturer_reg_m = manufacturer_reg_fb_[0];
-	feedback_s_m_.latched_fault_m = latched_fault_fb_[0];
 	
-	
-	
-	feedback_s_m = feedback_s_m_;
-	std::cout << "Motor Status: " << feedback_s_m.status_m<< std::endl;
-    	std::cout << "Battery Voltage: " << feedback_s_m.battery_vol_m<< std::endl;
-    	std::cout << "Motor Position: " << feedback_s_m.pos_m<< std::endl;
-    	std::cout << "Motor Velocity: " << feedback_s_m.vel_m<< std::endl;
-    	std::cout << "Motor Manufactuer Register: " << feedback_s_m.manufacturer_reg_m<< std::endl;
-    	std::cout << "Motor Latched Fault: " << feedback_s_m.latched_fault_m<< std::endl;
+	feedback_s_m->status_m = status_register_fb_[0];
+	feedback_s_m->battery_vol_m = battery_vol_fb_[0];
+	feedback_s_m->pos_m = encoder_fb_[0];
+	feedback_s_m->vel_m = vel_fb_[0];
+	feedback_s_m->manufacturer_reg_m = manufacturer_reg_fb_[0];
+	feedback_s_m->latched_fault_m = latched_fault_fb_[0];
 	
 }
 
