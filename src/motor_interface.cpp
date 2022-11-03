@@ -17,6 +17,8 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
     logger_->info("[Left Motor] Sockets ptr: {}", left_front_motor_sockets_);
     logger_->info("[Right Motor] Sockets ptr: {}", right_front_motor_sockets_);
     
+    left_front_motor_->nmtChangeState("nmt_enter_preoperational");
+    
     logger_->info("[Left Motor] Sending Initialization Command");
     left_front_motor_->motor_init(0x0C);
     logger_->info("[Left Motor] Initialization sleep time");
@@ -32,6 +34,8 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
     right_front_motor_->motor_enable(0x0D);
     logger_->info("[Right Motor] Initialization enable time");
     sleep(2);
+    
+    left_front_motor_->nmtChangeState("nmt_start_node");
 
     initialization_done = true;
 
@@ -68,8 +72,8 @@ MotorInterface::~MotorInterface(){
 void MotorInterface::requestMotorData(){
     if (initialization_done){
 	
-	logger_->info("Motor Data Request");
-        left_front_motor_->motor_request();
+	//logger_->info("Motor Data Request");
+        //left_front_motor_->motor_request();
     }
 
 

@@ -151,7 +151,7 @@ bool Motor::motor_init(int motor_id){
     int err = 0;
     logger_->info("Motor Sockets ptr in init: {}", motor_sockets);
 
-    err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
+    //err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
 	if (err != 0)
 	{
 		return MOTOR_ERROR;
@@ -178,7 +178,7 @@ bool Motor::motor_init(int motor_id){
 int Motor::motor_enable(int motor_id)
 {
 	int err = 0;
-	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
+	//err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
 
 	SDO_data d;
 	d.nodeid = motor_id;
@@ -189,7 +189,7 @@ int Motor::motor_enable(int motor_id)
 
 	err |= SDO_write(motor_sockets->motor_cfg_fd, &d);
 
-	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Start_Node);
+	//err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Start_Node);
 
 	return err;
 }
@@ -223,4 +223,18 @@ bool Motor::motorFeedback(int motor_id, MotorFeedback::feedback_s *feedback_s_m)
 	feedback_s_m->latched_fault_m = latched_fault_fb_[0];
 	
 }
+
+//
+bool Motor::nmtChangeState(std::string state_name){
+	int err =0;
+	if(state_name == "nmt_enter_preoperational"){
+		logger_->info("NMT State Pre-Operational");
+		err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, CANOPEN_BROADCAST_ID, NMT_Enter_PreOperational);
+	}
+	if(state_name == "nmt_start_node"){
+		logger_->info("NMT Start Node");
+		err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, CANOPEN_BROADCAST_ID, NMT_Start_Node);
+	}
+}
+
 
