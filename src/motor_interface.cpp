@@ -19,22 +19,20 @@ MotorInterface::MotorInterface() : Node("motor_interface"){
     
     left_front_motor_->nmtChangeState("nmt_enter_preoperational");
     
-    
-    logger_->info("[Right Motor] Sending Initialization Command");
-    right_front_motor_->motor_init(0x0D);
-    logger_->info("[Right Motor] Initialization sleep time");
-    sleep(10);
     logger_->info("[Left Motor] Sending Initialization Command");
     left_front_motor_->motor_init(0x0C);
     logger_->info("[Left Motor] Initialization sleep time");
-    sleep(10);
-
-    
-    right_front_motor_->motor_enable(0x0D);
-    logger_->info("[Right Motor] Initialization enable time");
     sleep(2);
+    logger_->info("[Right Motor] Sending Initialization Command");
+    right_front_motor_->motor_init(0x0D);
+    logger_->info("[Right Motor] Initialization sleep time");
+    sleep(2);
+
     left_front_motor_->motor_enable(0x0C);
     logger_->info("[Left Motor] Initialization enable time");
+    sleep(2);
+    right_front_motor_->motor_enable(0x0D);
+    logger_->info("[Right Motor] Initialization enable time");
     sleep(2);
     
     left_front_motor_->nmtChangeState("nmt_start_node");

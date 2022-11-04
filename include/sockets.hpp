@@ -25,16 +25,16 @@ class Sockets{
     typedef std::shared_ptr<Sockets> SocketsSPtr;
     typedef std::unique_ptr<Sockets> SocketsUPtr;
 
-    int motor_pdo_fd = -1;	//!< Process CAN-connection.
-    int motor_cfg_fd = -1;	//!< Configuration CAN-connection.
-    int motor_sync_fd = -1;  //!< Sync CAN-connection.
+    int motor_pdo_fd ;	//!< Process CAN-connection.
+    int motor_cfg_fd ;	//!< Configuration CAN-connection.
+    int motor_sync_fd ;  //!< Sync CAN-connection.
 
-    int nmt_motor_cfg_fd = -1;
+    int nmt_motor_cfg_fd ;
 
-    int motor_status_pdo_fd = -1;
-    int motor_vel_pdo_fd = -1;
-    int motor_enc_pdo_fd = -1; 
-    int motor_system_status_pdo_fd = -1;
+    int motor_status_pdo_fd ;
+    int motor_vel_pdo_fd ;
+    int motor_enc_pdo_fd ; 
+    int motor_system_status_pdo_fd ;
 
 
     

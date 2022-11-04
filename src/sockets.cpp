@@ -1,6 +1,18 @@
 #include <sockets.hpp>
 
 Sockets::Sockets(int motor_id){
+
+    motor_pdo_fd = -1;	//!< Process CAN-connection.
+    motor_cfg_fd = -1;	//!< Configuration CAN-connection.
+    motor_sync_fd = -1;  //!< Sync CAN-connection.
+
+    nmt_motor_cfg_fd = -1;
+
+    motor_status_pdo_fd = -1;
+    motor_vel_pdo_fd = -1;
+    motor_enc_pdo_fd = -1; 
+    motor_system_status_pdo_fd = -1;
+    
     createSockets(motor_id);
 }
 
@@ -15,7 +27,6 @@ bool Sockets::createSockets(int motor_id){
 		PDO_TX1_ID + motor_id,
 		};
 	motor_status_pdo_fd = socketcan_open(motor_status_pdo_filters, motor_status_pdo_masks, 1);
-	std::cout << motor_status_pdo_fd<< std::endl;
 
     uint32_t motor_vel_pdo_masks[1] = {COB_MASK};
 	uint32_t motor_vel_pdo_filters[1] = {
@@ -41,6 +52,7 @@ bool Sockets::createSockets(int motor_id){
 		SDO_TX + motor_id
         };
 	motor_cfg_fd = socketcan_open(cfg_filters, cfg_masks, 3);
+	std::cout << motor_cfg_fd << std::endl;
 
     uint32_t nmt_cfg_masks[1] = {COB_MASK};
 	uint32_t nmt_cfg_filters[1] = {
