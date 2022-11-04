@@ -43,7 +43,7 @@
 // MotorControls::MotorControlsSPtr motor_controls_ ;
 // ############################ Namespace ##########################
 
-// std::shared_ptr<spdlog::logger>  logger_motors;
+std::shared_ptr<spdlog::logger>  logger_;
 
 int main(int argc, char * argv[]){
 
@@ -58,8 +58,10 @@ int main(int argc, char * argv[]){
     auto root_logger = std::make_shared<spdlog::async_logger>("actuator_interface", sinks.begin(), sinks.end(), spdlog::thread_pool(), spdlog::async_overflow_policy::block);
     root_logger->set_level(spdlog::level::debug);
     spdlog::register_logger(root_logger);
+    
+    logger_ = spdlog::get("actuator_interface")->clone("test_actuator_interface");
 
-    std::cout << "in interface initialization.." << std::endl;
+    logger_->info("In Interface Initialization");
     std::shared_ptr<MotorInterface> node;
     node = std::make_shared<MotorInterface>();
     rclcpp::executors::MultiThreadedExecutor executor;

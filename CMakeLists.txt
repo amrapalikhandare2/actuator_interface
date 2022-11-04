@@ -84,6 +84,13 @@ install(TARGETS
   #DESTINATION lib
 )
 
+install(TARGETS	
+  test_actuator_interface
+  ${PROJECT_NAME}	
+  #DESTINATION lib/${PROJECT_NAME}		
+  DESTINATION lib
+)
+
 #install(DIRECTORY launch
 #  DESTINATION share/${PROJECT_NAME}
 #)

@@ -6,7 +6,7 @@ Motor::Motor(Sockets::SocketsSPtr motor_sockets_){
 	
 	logger_ = spdlog::get("actuator_interface")->clone("motor");
 	
-	logger_->info("Motor Sockets ptr in motor constructor: {}", motor_sockets_);
+	logger_->info("Motor Sockets ptr in Motor constructor: {}", motor_sockets_);
 	motor_sockets = motor_sockets_;
 	motor_controls = std::make_shared<MotorControls>(motor_sockets_);
     motor_feedback = std::make_shared<MotorFeedback>(motor_sockets_);
