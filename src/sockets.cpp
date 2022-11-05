@@ -51,7 +51,7 @@ bool Sockets::createSockets(int motor_id){
 		0x00,
 		SDO_TX + motor_id
         };
-	motor_cfg_fd = socketcan_open(cfg_filters, cfg_masks, 3);
+	motor_cfg_fd = socketcan_open(cfg_filters, cfg_masks, 2);
 	std::cout << motor_cfg_fd << std::endl;
 
     uint32_t nmt_cfg_masks[1] = {COB_MASK};
