@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "functional": "c"
+        "functional": "c",
+        "printd.c": "cpp",
+        "socketcan.c": "cpp"
     }
 }

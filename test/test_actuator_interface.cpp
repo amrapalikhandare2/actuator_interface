@@ -21,12 +21,12 @@
 #include <motor_interface.hpp>
 
 //###### Motor #######
-#include "socketcan/printd.c"
-#include "socketcan/socketcan.c"
-#include "canopen/canopen.h"
-#include "canopen/NMT.c"
-#include "canopen/PDO.c"
-#include "canopen/SDO.c"
+#include "../socketcan/printd.c"
+#include "../socketcan/socketcan.c"
+#include "../canopen/canopen.h"
+#include "../canopen/NMT.c"
+#include "../canopen/PDO.c"
+#include "../canopen/SDO.c"
 
 // ### Spd logger ###
 #include "spdlog/spdlog.h"

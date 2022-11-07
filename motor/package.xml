@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
-  <name>actuator_interface</name>
+  <name>motor</name>
   <version>0.6.2</version>
   <description>Acutuator Interface</description>
   <maintainer email="amrapali.kh@rightbot.in">Amrapali Khandare</maintainer>

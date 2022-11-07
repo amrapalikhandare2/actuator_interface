@@ -6,7 +6,7 @@
 #include <spdlog/fmt/ostr.h>
 #include <iostream>
 
-#include "../canopen/canopen.h"
+#include "../../canopen/canopen.h"
 
 #define SOCKETS_ERROR   (-1)
 

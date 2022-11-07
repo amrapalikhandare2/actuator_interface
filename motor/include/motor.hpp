@@ -6,7 +6,7 @@
 #include <spdlog/fmt/ostr.h>
 #include <iostream>
 
-#include "../canopen/canopen.h"
+#include "../../canopen/canopen.h"
 #include <sockets.hpp>
 #include <motor_controls.hpp>
 #include <motor_feedback.hpp>

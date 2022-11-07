@@ -1,22 +1,22 @@
 cmake_minimum_required(VERSION 3.5)
-project(actuator_interface)
+project(motor)
 
 ## Sources
 set(socket_SRCS
-    socketcan/socketcan.c
-    socketcan/socketcan.h
-    socketcan/printd.c
-    socketcan/printd.h
+    ../socketcan/socketcan.c
+    ../socketcan/socketcan.h
+    ../socketcan/printd.c
+    ../socketcan/printd.h
 )
 
 set(canopen_SRCS
-    canopen/canopen.h
-    canopen/NMT.c
-    canopen/NMT.h
-    canopen/PDO.c
-    canopen/PDO.h
-    canopen/SDO.c
-    canopen/SDO.h
+    ../canopen/canopen.h
+    ../canopen/NMT.c
+    ../canopen/NMT.h
+    ../canopen/PDO.c
+    ../canopen/PDO.h
+    ../canopen/SDO.c
+    ../canopen/SDO.h
 )
 
 
@@ -52,8 +52,8 @@ find_package(rclcpp REQUIRED)
 
 include_directories(
     include
-    json_reader/include
-    config_parser/include
+    ../json_reader/include
+    ../config_parser/include
 )
 
 add_library(socketcan SHARED ${socket_SRCS})
@@ -67,12 +67,12 @@ add_library(${PROJECT_NAME} SHARED
             src/motor_controls.cpp
             src/motor_feedback.cpp
             src/motor_interface.cpp
-            test/test_actuator_interface.cpp
+            ../test/test_actuator_interface.cpp
             )
 target_link_libraries(${PROJECT_NAME} canopen socketcan)
 ament_target_dependencies(${PROJECT_NAME} rclcpp)
 
-add_executable(test_actuator_interface config_parser/src/config_parser.cpp test/test_actuator_interface.cpp)
+add_executable(test_actuator_interface ../config_parser/src/config_parser.cpp ../test/test_actuator_interface.cpp)
 add_dependencies(test_actuator_interface ${PROJECT_NAME})
 target_link_libraries(test_actuator_interface ${PROJECT_NAME} spdlog::spdlog jsoncpp)
 
