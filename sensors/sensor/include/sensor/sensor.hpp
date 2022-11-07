@@ -20,4 +20,4 @@ class Sensor{
 
 };
 
-#endif //DUMMY_SENSOR_H_
+#endif //SENSOR_H_

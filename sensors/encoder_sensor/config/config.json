@@ -2,6 +2,7 @@
     
     "sensor_name" : "dummy_sensor_1",
     "sensor_data_type" : "sensor_1",
+    "motor_id" : 12,
     "counts": 5,
     "status": "offline"
                     

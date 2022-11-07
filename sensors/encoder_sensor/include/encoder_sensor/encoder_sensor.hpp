@@ -7,6 +7,7 @@
 #include <json_reader/json_read.h>
 #include <sensor/sensor.hpp>
 #include <sockets.hpp>
+#include <motor_feedback.hpp>
 
 class EncoderData {
 
@@ -42,8 +43,12 @@ class EncoderSensor : public Sensor{
         Json::Value sensor_data_;
         std::mutex read_mutex_;
         void init_json();
+        int motor_id_;
         EncoderData encoder_data_;
-
+        MotorFeedback::MotorFeedbackSPtr motor_feedback_;
+       
+        void readData(int motor_id, EncoderData *encoder_data);
+        MotorFeedback::feedback_s feedback_s_m_;
         
 };
 
