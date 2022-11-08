@@ -76,6 +76,15 @@ add_executable(test_actuator_interface ../config_parser/src/config_parser.cpp te
 add_dependencies(test_actuator_interface ${PROJECT_NAME})
 target_link_libraries(test_actuator_interface ${PROJECT_NAME} spdlog::spdlog jsoncpp)
 
+# install(
+#         TARGETS ${PROJECT_NAME}
+#         EXPORT ${PROJECT_NAME}
+#         ARCHIVE DESTINATION lib
+#         LIBRARY DESTINATION lib
+#         RUNTIME DESTINATION bin
+#         INCLUDES DESTINATION include
+
+# )
 
 install(TARGETS	
   test_actuator_interface

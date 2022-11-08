@@ -10,6 +10,13 @@
 #include <motor.hpp>
 #include <motor_controls.hpp>
 
+#include "../../socketcan/printd.c"
+#include "../../socketcan/socketcan.c"
+#include "../../canopen/canopen.h"
+#include "../../canopen/NMT.c"
+#include "../../canopen/PDO.c"
+#include "../../canopen/SDO.c"
+
 class MotorActuator : public Actuator {
 
 public:
@@ -32,6 +39,7 @@ private:
     Sockets::SocketsSPtr motor_sockets_;
     Motor::MotorSPtr motor_ ;
     MotorControls::MotorControlsSPtr motor_controls_;
+    std::shared_ptr<spdlog::logger> logger_;
     // bool motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element);
     int motor_id_;
     void init_json();

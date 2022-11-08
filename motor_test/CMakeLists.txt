@@ -31,6 +31,7 @@ find_package(encoder_sensor REQUIRED)
 add_library(${PROJECT_NAME} SHARED
         src/motor_test.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../motor/src/sockets.cpp
+        # ${CMAKE_CURRENT_SOURCE_DIR}/../m/src/motor_actuator.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../json_reader/src/json_read.cpp
         )
 

@@ -62,15 +62,20 @@ void signals() {
 
 int main() {
 
-    // motor_sockets_1 = std::make_shared<Sockets>(12);
+    motor_sockets_1 = std::make_shared<Sockets>(12);
     // motor_actuator_1 = std::make_shared<MotorActuator>(12, motor_sockets_1);
+    // motor_actuator_1 = std::make_shared<MotorActuator>(12,motor_sockets_1);
+
+    // motor_actuator_1->motorCommand(12, "velocity", motor_actuator_1->setPosition(0,0,0,0,0), motor_actuator_1->setVelocity(1,15,10,1,1) );
+
+
     actuator_data["counts"] = 0;
 
-    std::thread write_thread(test_write);
-    std::thread subscribe_thread(signals);
+    // std::thread write_thread(test_write);
+    // std::thread subscribe_thread(signals);
 
-    write_thread.join();
-    subscribe_thread.join();
+    // write_thread.join();
+    // subscribe_thread.join();
 
     return 0;
 
