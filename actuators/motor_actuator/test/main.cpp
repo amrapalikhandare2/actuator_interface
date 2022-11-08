@@ -4,6 +4,11 @@
 #include <condition_variable>
 #include <chrono>
 
+#include "spdlog/spdlog.h"
+#include "spdlog/async.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/sinks/rotating_file_sink.h"
+
 using namespace std;
 
 std::condition_variable cv;
@@ -20,6 +25,8 @@ Sockets::SocketsSPtr motor_sockets_1;
 MotorActuator::MotorActuatorSPtr motor_actuator_1;
 Json::Value actuator_data;
 std::mutex sync_mutex; // for sync of message_received variable
+std::shared_ptr<spdlog::logger> logger_;
+
 
 void test_write() {
 
@@ -62,14 +69,30 @@ void signals() {
 
 int main() {
 
+    spdlog::init_thread_pool(8192, 1);
+    auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt >();
+    console_sink->set_level(spdlog::level::info);
+    auto rotating_sink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>("/data/logs/robot_logs/actuator_interface_logs/motor_interface_logs.txt", 1024*1024*100, 3);
+    rotating_sink->set_level(spdlog::level::debug);
+    std::vector<spdlog::sink_ptr> sinks {console_sink,rotating_sink};
+    auto root_logger = std::make_shared<spdlog::async_logger>("actuator_interface", sinks.begin(), sinks.end(), spdlog::thread_pool(), spdlog::async_overflow_policy::block);
+    root_logger->set_level(spdlog::level::debug);
+    spdlog::register_logger(root_logger);
+    
+    logger_ = spdlog::get("actuator_interface")->clone("test_motor_actuator");
+
+    logger_->info("In Interface Initialization");
+
     motor_sockets_1 = std::make_shared<Sockets>(12);
-    // motor_actuator_1 = std::make_shared<MotorActuator>(12, motor_sockets_1);
+    
+    motor_actuator_1 = std::make_shared<MotorActuator>(12, motor_sockets_1);
+    
     // motor_actuator_1 = std::make_shared<MotorActuator>(12,motor_sockets_1);
 
-    // motor_actuator_1->motorCommand(12, "velocity", motor_actuator_1->setPosition(0,0,0,0,0), motor_actuator_1->setVelocity(1,15,10,1,1) );
+    motor_actuator_1->motorCommand(12, "velocity", motor_actuator_1->setPosition(0,0,0,0,0), motor_actuator_1->setVelocity(1,15,10,1,1) );
 
 
-    actuator_data["counts"] = 0;
+    // actuator_data["counts"] = 0;
 
     // std::thread write_thread(test_write);
     // std::thread subscribe_thread(signals);

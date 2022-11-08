@@ -4,10 +4,12 @@ using namespace std;
 
 
 MotorActuator::MotorActuator(int motor_id, Sockets::SocketsSPtr motor_sockets) {
-    init_json();
+    // init_json();
 
     // motor initializations
+    std::cout << "print1" << std::endl;
     motor_ = std::make_shared<Motor>(motor_sockets);
+    std::cout << "print2" << std::endl;
     motor_controls_ = std::make_shared<MotorControls>(motor_sockets);
     motor_id_ = motor_id;
 
