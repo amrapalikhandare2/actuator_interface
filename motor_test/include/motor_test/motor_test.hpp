@@ -27,9 +27,9 @@ private:
     std::shared_ptr<spdlog::logger> logger_;
 
     Json::Value actuator_data_;
-    Sockets::SocketsSPtr motor_sockets_1;
-    MotorActuator::MotorActuatorSPtr motor_actuator_1 ;
-    EncoderSensor::EncoderSensorSPtr motor_encoder_sensor_1;
+    // Sockets::SocketsSPtr motor_sockets_1;
+    // MotorActuator::MotorActuatorSPtr motor_actuator_1 ;
+    // EncoderSensor::EncoderSensorSPtr motor_encoder_sensor_1;
     
     int motor_id_;
     

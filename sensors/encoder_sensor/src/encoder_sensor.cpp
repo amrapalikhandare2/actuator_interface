@@ -4,7 +4,7 @@ using namespace std;
 
 EncoderSensor::EncoderSensor(int motor_id, Sockets::SocketsSPtr motor_sockets){
     
-    init_json();
+    // init_json();
     logger_ = spdlog::get("actuator_interface")->clone("encoder_sensor");
     update_data_thread_ = std::thread(&EncoderSensor::updateData,this);
     motor_feedback_ = std::make_shared<MotorFeedback>(motor_sockets);
