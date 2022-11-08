@@ -2,11 +2,13 @@
 using namespace std;
 
 
-EncoderSensor::EncoderSensor(Sockets::SocketsSPtr motor_sockets){
+EncoderSensor::EncoderSensor(int motor_id, Sockets::SocketsSPtr motor_sockets){
     
     init_json();
+    logger_ = spdlog::get("actuator_interface")->clone("encoder_sensor");
     update_data_thread_ = std::thread(&EncoderSensor::updateData,this);
     motor_feedback_ = std::make_shared<MotorFeedback>(motor_sockets);
+    motor_id_ = motor_id;
 }
 
 EncoderSensor::~EncoderSensor() {
@@ -23,7 +25,7 @@ void EncoderSensor::init_json(){
 
     parser.getValue(sensor_data_);
 
-    motor_id_ = sensor_data_["motor_id"].asInt64();
+    // motor_id_ = sensor_data_["motor_id"].asInt64();
 }
 void EncoderSensor::readData(int motor_id, EncoderData *encoder_data){
 
@@ -34,6 +36,13 @@ void EncoderSensor::readData(int motor_id, EncoderData *encoder_data){
     encoder_data->vel_m = feedback_s_m_.vel_m;
     encoder_data->manufacturer_reg_m = feedback_s_m_.manufacturer_reg_m;
     encoder_data->latched_fault_m = feedback_s_m_.latched_fault_m;
+
+    logger_->info("Motor Sensor: {}",encoder_data->status_m );
+    logger_->info("Motor Battery: {}",encoder_data->battery_vol_m );
+    logger_->info("Motor Position: {}",encoder_data->pos_m );
+    logger_->info("Motor Velocity: {}",encoder_data->vel_m );
+    logger_->info("Motor Manufacturer Reg: {}",encoder_data->manufacturer_reg_m );
+    logger_->info("Motor Latched Fault: {}",encoder_data->latched_fault_m );
     
 };
 

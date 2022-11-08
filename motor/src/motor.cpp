@@ -8,8 +8,8 @@ Motor::Motor(Sockets::SocketsSPtr motor_sockets_){
 	
 	logger_->info("Motor Sockets ptr in Motor constructor: {}", motor_sockets_);
 	motor_sockets = motor_sockets_;
-	motor_controls = std::make_shared<MotorControls>(motor_sockets_);
-    motor_feedback = std::make_shared<MotorFeedback>(motor_sockets_);
+	// motor_controls = std::make_shared<MotorControls>(motor_sockets_);
+    // motor_feedback = std::make_shared<MotorFeedback>(motor_sockets_);
     
 }
 
@@ -151,7 +151,7 @@ bool Motor::motor_init(int motor_id){
     int err = 0;
     logger_->info("Motor Sockets ptr in init: {}", motor_sockets);
 
-    //err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
+    err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
 	if (err != 0)
 	{
 		return MOTOR_ERROR;
@@ -178,7 +178,7 @@ bool Motor::motor_init(int motor_id){
 int Motor::motor_enable(int motor_id)
 {
 	int err = 0;
-	//err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
+	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Enter_PreOperational);
 
 	SDO_data d;
 	d.nodeid = motor_id;
@@ -189,7 +189,7 @@ int Motor::motor_enable(int motor_id)
 
 	err |= SDO_write(motor_sockets->motor_cfg_fd, &d);
 
-	//err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Start_Node);
+	err |= NMT_change_state(motor_sockets->nmt_motor_cfg_fd, motor_id, NMT_Start_Node);
 
 	return err;
 }
@@ -205,23 +205,7 @@ int Motor::motor_request(void)
 
 //***
 bool Motor::motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element){
-	motor_controls->motor_command(motor_id, command_type, position_cmd_element, velocity_cmd_element);
-}
-
-bool Motor::motorFeedback(int motor_id, MotorFeedback::feedback_s *feedback_s_m){
-	
-	motor_feedback->motor_status_n_voltage_read(motor_id, status_register_fb_, battery_vol_fb_, 1);
-	motor_feedback->motor_enc_read(motor_id, encoder_fb_, 1);
-	motor_feedback->motor_vel_read(motor_id, vel_fb_, 1);
-	motor_feedback->motor_system_status_read(motor_id, manufacturer_reg_fb_, latched_fault_fb_, 1);
-	
-	feedback_s_m->status_m = status_register_fb_[0];
-	feedback_s_m->battery_vol_m = battery_vol_fb_[0];
-	feedback_s_m->pos_m = encoder_fb_[0];
-	feedback_s_m->vel_m = vel_fb_[0];
-	feedback_s_m->manufacturer_reg_m = manufacturer_reg_fb_[0];
-	feedback_s_m->latched_fault_m = latched_fault_fb_[0];
-	
+	// motor_controls->motor_command(motor_id, command_type, position_cmd_element, velocity_cmd_element);
 }
 
 //

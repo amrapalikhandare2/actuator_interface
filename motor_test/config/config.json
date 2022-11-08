@@ -2,8 +2,6 @@
   "actuator_name": "dummy_actuator_1",
   "actuator_data_type": "actuator_1",
   "counts": 5,
-  "status": "offline",
-  "mode": "velocity",
-  
+  "status": "offline"
 }
  

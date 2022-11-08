@@ -67,12 +67,12 @@ add_library(${PROJECT_NAME} SHARED
             src/motor_controls.cpp
             src/motor_feedback.cpp
             src/motor_interface.cpp
-            ../test/test_actuator_interface.cpp
+            test/test_actuator_interface.cpp
             )
 target_link_libraries(${PROJECT_NAME} canopen socketcan)
 ament_target_dependencies(${PROJECT_NAME} rclcpp)
 
-add_executable(test_actuator_interface ../config_parser/src/config_parser.cpp ../test/test_actuator_interface.cpp)
+add_executable(test_actuator_interface ../config_parser/src/config_parser.cpp test/test_actuator_interface.cpp)
 add_dependencies(test_actuator_interface ${PROJECT_NAME})
 target_link_libraries(test_actuator_interface ${PROJECT_NAME} spdlog::spdlog jsoncpp)
 

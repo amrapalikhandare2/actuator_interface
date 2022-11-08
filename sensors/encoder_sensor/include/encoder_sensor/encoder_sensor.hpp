@@ -33,10 +33,11 @@ class EncoderSensor : public Sensor{
         typedef std::shared_ptr<EncoderSensor> EncoderSensorSPtr;
         typedef std::unique_ptr<EncoderSensor> EncoderSensorUPtr;
         
-        EncoderSensor(Sockets::SocketsSPtr motor_sockets);
+        EncoderSensor(int motor_id, Sockets::SocketsSPtr motor_sockets);
         ~EncoderSensor();
         
         void getData(Json::Value &sensor_data);  
+        std::shared_ptr<spdlog::logger> logger_;
 
         std::thread update_data_thread_;
         void updateData();

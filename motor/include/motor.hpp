@@ -79,8 +79,6 @@ class Motor{
     double vel_fb_[1] = {0};
     uint32_t manufacturer_reg_fb_[1] = {0};
     uint32_t latched_fault_fb_[1] = {0};
-
-    bool motorFeedback(int motor_id, MotorFeedback::feedback_s *feedback_s_m);
     
     bool nmtChangeState(std::string state_name);
         

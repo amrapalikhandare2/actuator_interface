@@ -4,12 +4,13 @@
     <name>motor_actuator</name>
     <version>0.0.0</version>
     <description>TODO: Package description</description>
-    <maintainer email="amrapali.kh@rightbot.in">dhruv</maintainer>
+    <maintainer email="amrapali.kh@rightbot.in">amrapali</maintainer>
     <license>TODO: License declaration</license>
 
     <buildtool_depend>ament_cmake</buildtool_depend>
 
     <depend>actuator</depend>
+    <depend>motor</depend>
 
     <test_depend>ament_lint_auto</test_depend>
     <test_depend>ament_lint_common</test_depend>

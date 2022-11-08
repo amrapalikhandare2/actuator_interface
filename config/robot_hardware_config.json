@@ -1,5 +1,5 @@
 {
-    "bot_variant": "bot",
+    "bot_variant": "sdp_bot",
     "bot": {
         "accessories": [
         {

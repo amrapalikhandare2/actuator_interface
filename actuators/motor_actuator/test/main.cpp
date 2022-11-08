@@ -1,4 +1,5 @@
 #include <motor_actuator/motor_actuator.hpp>
+#include <sockets.hpp>
 #include <thread>
 #include <condition_variable>
 #include <chrono>
@@ -14,11 +15,13 @@ std::condition_variable cv;
 std::mutex cv_m;
 
 bool message_received = false;
+
+Sockets::SocketsSPtr motor_sockets_1;
 MotorActuator::MotorActuatorSPtr motor_actuator_1;
 Json::Value actuator_data;
 std::mutex sync_mutex; // for sync of message_received variable
 
-void write() {
+void test_write() {
 
     while (true) {
 
@@ -28,7 +31,7 @@ void write() {
         cv.wait(lk, [] { return message_received; });
         std::cerr << "...finished waiting \n";
 
-        motor_actuator_1->writeData(actuator_data);
+        // motor_actuator_1->writeData(actuator_data);
 
         sync_mutex.lock();
         message_received = false;
@@ -59,10 +62,11 @@ void signals() {
 
 int main() {
 
-    motor_actuator_1 = std::make_shared<MotorActuator>();
+    // motor_sockets_1 = std::make_shared<Sockets>(12);
+    // motor_actuator_1 = std::make_shared<MotorActuator>(12, motor_sockets_1);
     actuator_data["counts"] = 0;
 
-    std::thread write_thread(write);
+    std::thread write_thread(test_write);
     std::thread subscribe_thread(signals);
 
     write_thread.join();
