@@ -1,0 +1,59 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.2.1 (/opt/ros/rolling/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.11.4 (/opt/ros/rolling/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /application/rightbot_ws/src/actuator_interface/actuators/actuator/include;/application/rightbot_ws/src/actuator_interface/actuators/actuator/../../json_reader/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /application/rightbot_ws/src/actuator_interface/build/actuator
+[35m[1mScanning dependencies of target actuator[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/actuator.dir/src/actuator.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/actuator.dir/application/rightbot_ws/src/actuator_interface/json_reader/src/json_read.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libactuator.so[0m
+[100%] Built target actuator
+-- Install configuration: ""
+-- Installing: /application/rightbot_ws/src/actuator_interface/install/actuator/include/
+-- Installing: /application/rightbot_ws/src/actuator_interface/install/actuator/include//actuator
+-- Installing: /application/rightbot_ws/src/actuator_interface/install/actuator/include//actuator/actuator.hpp
+-- Execute custom install script
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/environment/library_path.sh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/environment/library_path.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/ament_index/resource_index/package_run_dependencies/actuator
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/ament_index/resource_index/parent_prefix_path/actuator
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/environment/ament_prefix_path.sh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/environment/ament_prefix_path.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/environment/path.sh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/environment/path.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/local_setup.bash
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/local_setup.sh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/local_setup.zsh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/local_setup.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/ament_index/resource_index/packages/actuator
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/cmake/actuatorConfig.cmake
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/cmake/actuatorConfig-version.cmake
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.xml
+-- Installing: /application/rightbot_ws/src/actuator_interface/install/actuator/lib/libactuator.so
+-- Installing: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/cmake/actuatorExport.cmake
+-- Installing: /application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/cmake/actuatorExport-noconfig.cmake

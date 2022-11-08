@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/application/rightbot_ws/src/actuator_interface/json_reader/include/json_reader/json_read.h
+iostream
+-
+fstream
+-
+jsoncpp/json/json.h
+-
+
+/application/rightbot_ws/src/actuator_interface/json_reader/src/json_read.cpp
+json_reader/json_read.h
+-
+
+/application/rightbot_ws/src/actuator_interface/sensors/sensor/include/sensor/sensor.hpp
+iostream
+-
+memory
+-
+json_reader/json_read.h
+-
+
+/application/rightbot_ws/src/actuator_interface/sensors/sensor/src/sensor.cpp
+sensor/sensor.hpp
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libsensor.so -o libsensor.so CMakeFiles/sensor.dir/src/sensor.cpp.o CMakeFiles/sensor.dir/application/rightbot_ws/src/actuator_interface/json_reader/src/json_read.cpp.o  -lpthread -ljsoncpp 

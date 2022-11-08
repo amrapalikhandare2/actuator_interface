@@ -194,14 +194,14 @@ int Motor::motor_enable(int motor_id)
 	return err;
 }
 
-int Motor::motor_request(void)
-{
+// int Motor::motor_request(void)
+// {
 
-	Socketcan_t data[1];
-	data[0].size = 1;
-	data[0].data = 0x00;
-	return socketcan_write(motor_sockets->motor_sync_fd, 128, 1, data);
-}
+// 	Socketcan_t data[1];
+// 	data[0].size = 1;
+// 	data[0].data = 0x00;
+// 	return socketcan_write(motor_sockets->motor_sync_fd, 128, 1, data);
+// }
 
 //***
 bool Motor::motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element){

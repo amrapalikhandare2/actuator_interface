@@ -1,0 +1,4 @@
+/application/rightbot_ws/src/actuator_interface/install/motor_test/include//motor_test/motor_test.hpp
+/application/rightbot_ws/src/actuator_interface/install/motor_test/lib/libmotor_test.so
+/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/cmake/motor_testExport.cmake
+/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/cmake/motor_testExport-noconfig.cmake

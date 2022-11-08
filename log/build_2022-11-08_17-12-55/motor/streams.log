@@ -1,0 +1,64 @@
+[0.025s] Invoking command in '/application/rightbot_ws/src/actuator_interface/build/motor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/motor -- -j4 -l4
+[0.084s] [ 17%] Built target socketcan
+[0.102s] [ 41%] Built target canopen
+[0.119s] [35m[1mScanning dependencies of target motor[0m
+[0.137s] [ 47%] [32mBuilding CXX object CMakeFiles/motor.dir/src/motor_feedback.cpp.o[0m
+[0.718s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motor_status_n_voltage_read(int, uint16_t*, float*, int)[m[K’:
+[0.718s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:33:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[0.719s]    33 |  if ([01;35m[Kf.id == (PDO_TX1_ID + motor_id)[m[K){
+[0.719s]       |      [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motor_enc_read(int, uint32_t*, int)[m[K’:
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:51:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[0.719s]    51 |  if ([01;35m[Kf.id == (PDO_TX3_ID + motor_id)[m[K)
+[0.719s]       |      [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motor_vel_read(int, double*, int)[m[K’:
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:81:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[0.719s]    81 |  if ([01;35m[Kf.id == (PDO_TX2_ID + motor_id)[m[K)
+[0.719s]       |      [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:75:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krpm[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[0.719s]    75 |     int32_t [01;35m[Krpm[m[K;
+[0.719s]       |             [01;35m[K^~~[m[K
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motor_system_status_read(int, uint32_t*, uint32_t*, int)[m[K’:
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:99:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[0.719s]    99 |  if ([01;35m[Kf.id == (PDO_TX4_ID + motor_id)[m[K)
+[0.719s]       |      [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motorFeedback(int, MotorFeedback::feedback_s*)[m[K’:
+[0.719s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:124:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[0.720s]   124 | [01;35m[K}[m[K
+[0.720s]       | [01;35m[K^[m[K
+[1.984s] In file included from [01m[K/application/rightbot_ws/src/actuator_interface/motor/include/../../canopen/canopen.h:3[m[K,
+[1.984s]                  from [01m[K/application/rightbot_ws/src/actuator_interface/motor/include/sockets.hpp:9[m[K,
+[1.984s]                  from [01m[K/application/rightbot_ws/src/actuator_interface/motor/include/motor_feedback.hpp:8[m[K,
+[1.984s]                  from [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:1[m[K:
+[1.984s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/include/../../canopen/NMT.h:[m[K At global scope:
+[1.984s] [01m[K/application/rightbot_ws/src/actuator_interface/motor/include/../../canopen/NMT.h:16:3:[m[K [01;35m[Kwarning: [m[K‘[01m[KNMT_transisions_t[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+[1.984s]    16 | } [01;35m[KNMT_transisions_t[m[K;
+[1.984s]       |   [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[3.691s] [ 52%] [32m[1mLinking CXX shared library libmotor.so[0m
+[4.477s] [ 82%] Built target motor
+[4.500s] [ 88%] [32m[1mLinking CXX executable test_actuator_interface[0m
+[4.660s] [100%] Built target test_actuator_interface
+[4.672s] Invoked command in '/application/rightbot_ws/src/actuator_interface/build/motor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/motor -- -j4 -l4
+[4.703s] Invoking command in '/application/rightbot_ws/src/actuator_interface/build/motor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/motor
+[4.710s] -- Install configuration: ""
+[4.710s] -- Execute custom install script
+[4.710s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/lib/motor/test_actuator_interface
+[4.710s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/lib/motor/libmotor.so
+[4.711s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/lib/test_actuator_interface
+[4.711s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/lib/libmotor.so
+[4.711s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/ament_index/resource_index/package_run_dependencies/motor
+[4.712s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/ament_index/resource_index/parent_prefix_path/motor
+[4.712s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/environment/ament_prefix_path.sh
+[4.712s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/environment/ament_prefix_path.dsv
+[4.712s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/environment/path.sh
+[4.713s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/environment/path.dsv
+[4.713s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/local_setup.bash
+[4.713s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/local_setup.sh
+[4.713s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/local_setup.zsh
+[4.714s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/local_setup.dsv
+[4.714s] -- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.dsv
+[4.721s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/ament_index/resource_index/packages/motor
+[4.721s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/cmake/motorConfig.cmake
+[4.721s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/cmake/motorConfig-version.cmake
+[4.722s] -- Up-to-date symlink: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.xml
+[4.725s] Invoked command in '/application/rightbot_ws/src/actuator_interface/build/motor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/motor

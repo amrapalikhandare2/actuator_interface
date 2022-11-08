@@ -1,0 +1,4 @@
+/application/rightbot_ws/src/actuator_interface/install/sensor/include//sensor/sensor.hpp
+/application/rightbot_ws/src/actuator_interface/install/sensor/lib/libsensor.so
+/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/cmake/sensorExport.cmake
+/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/cmake/sensorExport-noconfig.cmake

@@ -1,0 +1,256 @@
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor.hpp:11[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:10[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::enable_voltage[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+   90 |     md_control_register_u_t md_control_register = {0[01;35m[K}[m[K;
+      |                                                     [01;35m[K^[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::quick_stop[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::enable_operation[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::new_setpoint[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::instantaneous_change_set[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::absolute_or_relative[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::reset_fault[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::halt[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::reserved[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:13[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/printd.c:[m[K In function ‘[01m[Kvoid printd(PRINTD_LOGLEVEL, const char*, ...)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/printd.c:22:22:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   22 |  const char* color = [01;35m[K"\e[%d;%dm"[m[K;
+      |                      [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/printd.c:43:9:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   43 |  printf([01;35m[K"\e[%d;%dm"[m[K, 0, 0);
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:14[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:[m[K In function ‘[01m[Kint socketcan_open(uint32_t*, uint32_t*, uint32_t)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:40:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Krfilter[m[K’ [[01;35m[K-Wvla[m[K]
+   40 |  struct can_filter [01;35m[Krfilter[m[K[num_filters];
+      |                    [01;35m[K^~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:41:16:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   41 |  for(int i=0; [01;35m[Ki<num_filters[m[K; i++) {
+      |               [01;35m[K~^~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:[m[K In function ‘[01m[Kint socketcan_read(int, my_can_frame*, int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:70:13:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kt[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   70 |  int bytes, [01;35m[Kt[m[K;
+      |             [01;35m[K^[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:18[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../canopen/SDO.c:[m[K In function ‘[01m[Kint SDO_write(int, const SDO_data*)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../canopen/SDO.c:46:4:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kfillerbytes[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   46 |   {[01;35m[Kfillerbytes[m[K, 0x00}
+      |    [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:[m[K In member function ‘[01m[Kbool MotorActuator::motorCommand(int, std::string, MotorControls::position_cmd_t, MotorControls::velocity_cmd_t)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:38:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   38 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:[m[K In member function ‘[01m[Kvirtual void MotorActuator::writeData(Json::Value&)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:62:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kactuator_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   62 | void MotorActuator::writeData([01;35m[KJson::Value &actuator_data[m[K) {
+      |                               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/sockets.cpp:[m[K In member function ‘[01m[Kbool Sockets::createSockets(int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/sockets.cpp:27:14:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((int)PDO_TX1_ID) + motor_id)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   27 |   [01;35m[KPDO_TX1_ID + motor_id[m[K,
+      |   [01;35m[K~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/sockets.cpp:33:14:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((int)PDO_TX2_ID) + motor_id)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   33 |   [01;35m[KPDO_TX2_ID + motor_id[m[K,
+      |   [01;35m[K~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/sockets.cpp:39:14:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((int)PDO_TX3_ID) + motor_id)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   39 |   [01;35m[KPDO_TX3_ID + motor_id[m[K,
+      |   [01;35m[K~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/sockets.cpp:45:14:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((int)PDO_TX4_ID) + motor_id)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   45 |   [01;35m[KPDO_TX4_ID + motor_id[m[K,
+      |   [01;35m[K~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/sockets.cpp:52:10:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((int)SDO_TX) + motor_id)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   52 |   [01;35m[KSDO_TX + motor_id[m[K
+      |   [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/sockets.cpp:59:10:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(1792 + motor_id)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   59 |   NMT_TX + motor_id};
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor.hpp:11[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::enable_voltage[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+   90 |     md_control_register_u_t md_control_register = {0[01;35m[K}[m[K;
+      |                                                     [01;35m[K^[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::quick_stop[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::enable_operation[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::new_setpoint[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::instantaneous_change_set[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::absolute_or_relative[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::reset_fault[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::halt[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::reserved[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:[m[K In member function ‘[01m[Kint Motor::motor_Transmit_PDO_n_Parameter(uint16_t, uint8_t, uint32_t)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:20:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcob[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   20 | int Motor::motor_Transmit_PDO_n_Parameter(uint16_t node_id, uint8_t n, [01;35m[Kuint32_t cob[m[K){
+      |                                                                        [01;35m[K~~~~~~~~~^~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:[m[K In member function ‘[01m[Kint Motor::motor_config_node(int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:110:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  110 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:[m[K In member function ‘[01m[Kint Motor::motor_setmode_sdo(uint16_t, Motor::Motor_mode)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:113:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerr[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  113 |     int [01;35m[Kerr[m[K = 0;
+      |         [01;35m[K^~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:[m[K In member function ‘[01m[Kbool Motor::motorCommand(int, std::string, MotorControls::position_cmd_t, MotorControls::velocity_cmd_t)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:209:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  209 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:207:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  207 | bool Motor::motorCommand([01;35m[Kint motor_id[m[K, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element){
+      |                          [01;35m[K~~~~^~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:207:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcommand_type[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  207 | bool Motor::motorCommand(int motor_id, [01;35m[Kstd::string command_type[m[K, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element){
+      |                                        [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:207:96:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kposition_cmd_element[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  207 | bool Motor::motorCommand(int motor_id, std::string command_type, [01;35m[KMotorControls::position_cmd_t position_cmd_element[m[K, MotorControls::velocity_cmd_t velocity_cmd_element){
+      |                                                                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:207:148:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvelocity_cmd_element[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  207 | bool Motor::motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, [01;35m[KMotorControls::velocity_cmd_t velocity_cmd_element[m[K){
+      |                                                                                                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:[m[K In member function ‘[01m[Kbool Motor::nmtChangeState(std::string)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:222:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  222 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_controls.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::enable_voltage[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+   90 |     md_control_register_u_t md_control_register = {0[01;35m[K}[m[K;
+      |                                                     [01;35m[K^[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::quick_stop[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::enable_operation[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::new_setpoint[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::instantaneous_change_set[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::absolute_or_relative[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::reset_fault[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::halt[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::reserved[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_controls.cpp:[m[K In member function ‘[01m[Kint MotorControls::set_vel_speed(uint16_t, int, float)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_controls.cpp:29:7:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(int32_t)rpm[m[K’ from ‘[01m[Kint32_t[m[K’ {aka ‘[01m[Kint[m[K’} to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   29 |   {4, [01;35m[Krpm[m[K}};
+      |       [01;35m[K^~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_controls.cpp:[m[K In member function ‘[01m[Kbool MotorControls::motor_command(int, std::string, MotorControls::position_cmd_t, MotorControls::velocity_cmd_t)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_controls.cpp:146:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  146 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_controls.cpp:[m[K In member function ‘[01m[Kint MotorControls::motor_setmode_sdo(uint16_t, MotorControls::Motor_mode)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_controls.cpp:149:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerr[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  149 |     int [01;35m[Kerr[m[K = 0;
+      |         [01;35m[K^~~[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/canopen.h:3[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/sockets.hpp:9[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:9[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/src/motor_actuator.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:[m[K At global scope:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:16:3:[m[K [01;35m[Kwarning: [m[K‘[01m[KNMT_transisions_t[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+   16 | } [01;35m[KNMT_transisions_t[m[K;
+      |   [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/canopen.h:3[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/sockets.hpp:9[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/sockets.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:[m[K At global scope:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:16:3:[m[K [01;35m[Kwarning: [m[K‘[01m[KNMT_transisions_t[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+   16 | } [01;35m[KNMT_transisions_t[m[K;
+      |   [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:[m[K In member function ‘[01m[Kbool Motor::motor_init(int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:176:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
+  176 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/canopen.h:3[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor.hpp:9[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:[m[K At global scope:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:16:3:[m[K [01;35m[Kwarning: [m[K‘[01m[KNMT_transisions_t[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+   16 | } [01;35m[KNMT_transisions_t[m[K;
+      |   [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/canopen.h:3[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/sockets.hpp:9[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:8[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_controls.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:[m[K At global scope:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:16:3:[m[K [01;35m[Kwarning: [m[K‘[01m[KNMT_transisions_t[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+   16 | } [01;35m[KNMT_transisions_t[m[K;
+      |   [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:[m[K In member function ‘[01m[Kint Motor::motor_config_node(int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor.cpp:71:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kerr[m[K’ may be used uninitialized in this function [[01;35m[K-Wmaybe-uninitialized[m[K]
+   71 |     [01;35m[Kerr |= motor_Transmit_PDO_n_Parameter(motor_id, 1, PDO_TX1_ID + motor_id)[m[K;
+      |     [01;35m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motor_status_n_voltage_read(int, uint16_t*, float*, int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:33:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   33 |  if ([01;35m[Kf.id == (PDO_TX1_ID + motor_id)[m[K){
+      |      [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motor_enc_read(int, uint32_t*, int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:51:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   51 |  if ([01;35m[Kf.id == (PDO_TX3_ID + motor_id)[m[K)
+      |      [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motor_vel_read(int, double*, int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:81:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   81 |  if ([01;35m[Kf.id == (PDO_TX2_ID + motor_id)[m[K)
+      |      [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:75:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krpm[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   75 |     int32_t [01;35m[Krpm[m[K;
+      |             [01;35m[K^~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motor_system_status_read(int, uint32_t*, uint32_t*, int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:99:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   99 |  if ([01;35m[Kf.id == (PDO_TX4_ID + motor_id)[m[K)
+      |      [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:[m[K In member function ‘[01m[Kint MotorFeedback::motorFeedback(int, MotorFeedback::feedback_s*)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:123:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  123 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/canopen.h:3[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/sockets.hpp:9[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_feedback.hpp:8[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/motor/src/motor_feedback.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:[m[K At global scope:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:16:3:[m[K [01;35m[Kwarning: [m[K‘[01m[KNMT_transisions_t[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+   16 | } [01;35m[KNMT_transisions_t[m[K;
+      |   [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor.hpp:11[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:10[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/test/main.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::enable_voltage[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+   90 |     md_control_register_u_t md_control_register = {0[01;35m[K}[m[K;
+      |                                                     [01;35m[K^[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::quick_stop[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::enable_operation[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::new_setpoint[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::instantaneous_change_set[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::absolute_or_relative[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::reset_fault[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::halt[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/motor_controls.hpp:90:53:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KMotorControls::md_control_register_s_::control_s_::reserved[m[K’ [[01;35m[K-Wmissing-field-initializers[m[K]
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:13[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/test/main.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/printd.c:[m[K In function ‘[01m[Kvoid printd(PRINTD_LOGLEVEL, const char*, ...)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/printd.c:22:22:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   22 |  const char* color = [01;35m[K"\e[%d;%dm"[m[K;
+      |                      [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/printd.c:43:9:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   43 |  printf([01;35m[K"\e[%d;%dm"[m[K, 0, 0);
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:14[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/test/main.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:[m[K In function ‘[01m[Kint socketcan_open(uint32_t*, uint32_t*, uint32_t)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:40:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Krfilter[m[K’ [[01;35m[K-Wvla[m[K]
+   40 |  struct can_filter [01;35m[Krfilter[m[K[num_filters];
+      |                    [01;35m[K^~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:41:16:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   41 |  for(int i=0; [01;35m[Ki<num_filters[m[K; i++) {
+      |               [01;35m[K~^~~~~~~~~~~~[m[K
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:[m[K In function ‘[01m[Kint socketcan_read(int, my_can_frame*, int)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../socketcan/socketcan.c:70:13:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kt[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   70 |  int bytes, [01;35m[Kt[m[K;
+      |             [01;35m[K^[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:18[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/test/main.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../canopen/SDO.c:[m[K In function ‘[01m[Kint SDO_write(int, const SDO_data*)[m[K’:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../json_reader/include/../../canopen/SDO.c:46:4:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kfillerbytes[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K-Wnarrowing[m[K]
+   46 |   {[01;35m[Kfillerbytes[m[K, 0x00}
+      |    [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/canopen.h:3[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/sockets.hpp:9[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/include/motor_actuator/motor_actuator.hpp:9[m[K,
+                 from [01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/test/main.cpp:1[m[K:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:[m[K At global scope:
+[01m[K/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/../../motor/include/../../canopen/NMT.h:16:3:[m[K [01;35m[Kwarning: [m[K‘[01m[KNMT_transisions_t[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+   16 | } [01;35m[KNMT_transisions_t[m[K;
+      |   [01;35m[K^~~~~~~~~~~~~~~~~[m[K

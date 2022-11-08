@@ -1,0 +1,82 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found ament_cmake: 1.2.1 (/opt/ros/rolling/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 15.0.0 (/opt/ros/rolling/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 3.0.1 (/opt/ros/rolling/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 5.1.0 (/opt/ros/rolling/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.1.2 (/opt/ros/rolling/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /application/rightbot_ws/src/actuator_interface/build/motor
+[35m[1mScanning dependencies of target socketcan[0m
+[  5%] [32mBuilding C object CMakeFiles/socketcan.dir/application/rightbot_ws/src/actuator_interface/socketcan/printd.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/socketcan.dir/application/rightbot_ws/src/actuator_interface/socketcan/socketcan.c.o[0m
+[ 17%] [32m[1mLinking C shared library libsocketcan.so[0m
+[ 17%] Built target socketcan
+[35m[1mScanning dependencies of target canopen[0m
+[ 23%] [32mBuilding C object CMakeFiles/canopen.dir/application/rightbot_ws/src/actuator_interface/canopen/NMT.c.o[0m
+[ 35%] [32mBuilding C object CMakeFiles/canopen.dir/application/rightbot_ws/src/actuator_interface/canopen/PDO.c.o[0m
+[ 35%] [32mBuilding C object CMakeFiles/canopen.dir/application/rightbot_ws/src/actuator_interface/canopen/SDO.c.o[0m
+[ 41%] [32m[1mLinking C shared library libcanopen.so[0m
+[ 41%] Built target canopen
+[35m[1mScanning dependencies of target motor[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/motor.dir/src/motor_controls.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/motor.dir/src/motor.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/motor.dir/src/sockets.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/motor.dir/src/motor_feedback.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/motor.dir/src/motor_interface.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/motor.dir/test/test_actuator_interface.cpp.o[0m
+[ 82%] [32m[1mLinking CXX shared library libmotor.so[0m
+[ 82%] Built target motor
+[35m[1mScanning dependencies of target test_actuator_interface[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/test_actuator_interface.dir/application/rightbot_ws/src/actuator_interface/config_parser/src/config_parser.cpp.o[0m
+[ 94%] [32mBuilding CXX object CMakeFiles/test_actuator_interface.dir/test/test_actuator_interface.cpp.o[0m
+[100%] [32m[1mLinking CXX executable test_actuator_interface[0m
+[100%] Built target test_actuator_interface
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/lib/motor/test_actuator_interface
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/lib/motor/libmotor.so
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/lib/test_actuator_interface
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/lib/libmotor.so
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/ament_index/resource_index/package_run_dependencies/motor
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/ament_index/resource_index/parent_prefix_path/motor
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/environment/ament_prefix_path.sh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/environment/ament_prefix_path.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/environment/path.sh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/environment/path.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/local_setup.bash
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/local_setup.sh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/local_setup.zsh
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/local_setup.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.dsv
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/ament_index/resource_index/packages/motor
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/cmake/motorConfig.cmake
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/cmake/motorConfig-version.cmake
+-- Symlinking: /application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.xml

@@ -1,0 +1,677 @@
+[0.156s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-up-to', 'motor_test']
+[0.156s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5e5dde70d0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=['motor_test'], packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5e5dde70d0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f5e5dde7610>)
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.183s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/application/rightbot_ws/src/actuator_interface'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extension 'ros'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extensions ['cmake', 'python']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extension 'cmake'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extension 'python'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extensions ['python_setup_py']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators) by extension 'python_setup_py'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/actuator) by extension 'ros'
+[0.202s] DEBUG:colcon.colcon_core.package_identification:Package 'actuators/actuator' with type 'ros.ament_cmake' and name 'actuator'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extension 'colcon_meta'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extensions ['ros']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(actuators/motor_actuator) by extension 'ros'
+[0.203s] DEBUG:colcon.colcon_core.package_identification:Package 'actuators/motor_actuator' with type 'ros.ament_cmake' and name 'motor_actuator'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extension 'ignore_ament_install'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extensions ['colcon_pkg']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extension 'colcon_pkg'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extensions ['colcon_meta']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extension 'colcon_meta'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extensions ['ros']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extension 'ros'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extensions ['cmake', 'python']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extension 'cmake'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(canopen) by extension 'python_setup_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'python_setup_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser) by extension 'python_setup_py'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extension 'ros'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extensions ['cmake', 'python']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extension 'cmake'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extension 'python'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extensions ['python_setup_py']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include) by extension 'python_setup_py'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extension 'ros'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extensions ['cmake', 'python']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extension 'cmake'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extension 'python'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extensions ['python_setup_py']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/include/config_parser) by extension 'python_setup_py'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extension 'ignore_ament_install'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extensions ['colcon_pkg']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extension 'colcon_pkg'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extension 'ros'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extensions ['cmake', 'python']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extension 'cmake'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extension 'python'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extensions ['python_setup_py']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(config_parser/src) by extension 'python_setup_py'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extension 'ignore_ament_install'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extensions ['colcon_pkg']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extension 'colcon_pkg'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extension 'ros'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extensions ['cmake', 'python']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extension 'cmake'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extension 'python'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extensions ['python_setup_py']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader) by extension 'python_setup_py'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extension 'ros'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extensions ['cmake', 'python']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extension 'cmake'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extension 'python'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extensions ['python_setup_py']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include) by extension 'python_setup_py'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extension 'ros'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extensions ['cmake', 'python']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extension 'cmake'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extension 'python'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extensions ['python_setup_py']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/include/json_reader) by extension 'python_setup_py'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extension 'ros'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extensions ['cmake', 'python']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extension 'cmake'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extension 'python'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extensions ['python_setup_py']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(json_reader/src) by extension 'python_setup_py'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(motor) by extension 'ros'
+[0.209s] DEBUG:colcon.colcon_core.package_identification:Package 'motor' with type 'ros.ament_cmake' and name 'motor'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(motor_test) by extension 'ros'
+[0.210s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_test' with type 'ros.ament_cmake' and name 'motor_test'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extension 'ros'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extensions ['cmake', 'python']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extension 'cmake'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extension 'python'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extensions ['python_setup_py']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(sensors) by extension 'python_setup_py'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/encoder_sensor) by extension 'ros'
+[0.211s] DEBUG:colcon.colcon_core.package_identification:Package 'sensors/encoder_sensor' with type 'ros.ament_cmake' and name 'encoder_sensor'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(sensors/sensor) by extension 'ros'
+[0.212s] DEBUG:colcon.colcon_core.package_identification:Package 'sensors/sensor' with type 'ros.ament_cmake' and name 'sensor'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extension 'ros'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extensions ['cmake', 'python']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extension 'cmake'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extension 'python'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extensions ['python_setup_py']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(socketcan) by extension 'python_setup_py'
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.234s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /application/rightbot_ws/install
+[0.236s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/rolling
+[0.237s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.310s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'cmake_target' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'cmake_clean_first' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'cmake_force_configure' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'ament_cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'actuator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.311s] DEBUG:colcon.colcon_core.verb:Building package 'actuator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/application/rightbot_ws/src/actuator_interface/build/actuator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/application/rightbot_ws/src/actuator_interface/install/actuator', 'merge_install': False, 'path': '/application/rightbot_ws/src/actuator_interface/actuators/actuator', 'symlink_install': True, 'test_result_base': None}
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'cmake_target' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'cmake_clean_first' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'cmake_force_configure' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'ament_cmake_args' from command line to 'None'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'motor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.312s] DEBUG:colcon.colcon_core.verb:Building package 'motor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/application/rightbot_ws/src/actuator_interface/build/motor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/application/rightbot_ws/src/actuator_interface/install/motor', 'merge_install': False, 'path': '/application/rightbot_ws/src/actuator_interface/motor', 'symlink_install': True, 'test_result_base': None}
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'cmake_args' from command line to 'None'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'cmake_target' from command line to 'None'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'cmake_clean_first' from command line to 'False'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'cmake_force_configure' from command line to 'False'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'ament_cmake_args' from command line to 'None'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'sensor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.312s] DEBUG:colcon.colcon_core.verb:Building package 'sensor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/application/rightbot_ws/src/actuator_interface/build/sensor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/application/rightbot_ws/src/actuator_interface/install/sensor', 'merge_install': False, 'path': '/application/rightbot_ws/src/actuator_interface/sensors/sensor', 'symlink_install': True, 'test_result_base': None}
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'cmake_args' from command line to 'None'
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'cmake_target' from command line to 'None'
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'cmake_clean_first' from command line to 'False'
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'cmake_force_configure' from command line to 'False'
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'ament_cmake_args' from command line to 'None'
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'encoder_sensor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.313s] DEBUG:colcon.colcon_core.verb:Building package 'encoder_sensor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/application/rightbot_ws/src/actuator_interface/build/encoder_sensor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor', 'merge_install': False, 'path': '/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor', 'symlink_install': True, 'test_result_base': None}
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'cmake_target' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'cmake_clean_first' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'cmake_force_configure' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'ament_cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'motor_actuator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.314s] DEBUG:colcon.colcon_core.verb:Building package 'motor_actuator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/application/rightbot_ws/src/actuator_interface/build/motor_actuator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/application/rightbot_ws/src/actuator_interface/install/motor_actuator', 'merge_install': False, 'path': '/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator', 'symlink_install': True, 'test_result_base': None}
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'cmake_target' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'cmake_clean_cache' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'cmake_clean_first' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'cmake_force_configure' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'ament_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'catkin_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'motor_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.315s] DEBUG:colcon.colcon_core.verb:Building package 'motor_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/application/rightbot_ws/src/actuator_interface/build/motor_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/application/rightbot_ws/src/actuator_interface/install/motor_test', 'merge_install': False, 'path': '/application/rightbot_ws/src/actuator_interface/motor_test', 'symlink_install': True, 'test_result_base': None}
+[0.315s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.318s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.318s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/application/rightbot_ws/src/actuator_interface/motor' with build type 'ament_cmake'
+[0.318s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/application/rightbot_ws/src/actuator_interface/motor'
+[0.323s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.323s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.323s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.327s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/application/rightbot_ws/src/actuator_interface/actuators/actuator' with build type 'ament_cmake'
+[0.327s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/application/rightbot_ws/src/actuator_interface/actuators/actuator'
+[0.328s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.329s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.334s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/application/rightbot_ws/src/actuator_interface/sensors/sensor' with build type 'ament_cmake'
+[0.334s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/application/rightbot_ws/src/actuator_interface/sensors/sensor'
+[0.335s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.335s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/motor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/motor -- -j4 -l4
+[0.350s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/actuator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/actuator -- -j4 -l4
+[0.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/sensor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/sensor -- -j4 -l4
+[0.411s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/sensor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/sensor -- -j4 -l4
+[0.416s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/actuator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/actuator -- -j4 -l4
+[0.448s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/sensor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/sensor
+[0.452s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/actuator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/actuator
+[0.475s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sensor)
+[0.476s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/sensor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/sensor
+[0.481s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor' for CMake module files
+[0.482s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor' for CMake config files
+[0.482s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor', 'cmake_prefix_path')
+[0.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/cmake_prefix_path.ps1'
+[0.483s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/cmake_prefix_path.dsv'
+[0.484s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/cmake_prefix_path.sh'
+[0.484s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/lib'
+[0.484s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor', 'ld_library_path_lib')
+[0.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/ld_library_path_lib.ps1'
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/ld_library_path_lib.dsv'
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/ld_library_path_lib.sh'
+[0.486s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/bin'
+[0.486s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/lib/pkgconfig/sensor.pc'
+[0.486s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/lib/python3.8/site-packages'
+[0.486s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/bin'
+[0.487s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.ps1'
+[0.488s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.dsv'
+[0.488s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.sh'
+[0.489s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.bash'
+[0.489s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.zsh'
+[0.489s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/sensor/share/colcon-core/packages/sensor)
+[0.492s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(actuator)
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator' for CMake module files
+[0.495s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/actuator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/actuator
+[0.496s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator' for CMake config files
+[0.496s] Level 1:colcon.colcon_core.shell:create_environment_hook('actuator', 'cmake_prefix_path')
+[0.498s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/cmake_prefix_path.ps1'
+[0.498s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/cmake_prefix_path.dsv'
+[0.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/cmake_prefix_path.sh'
+[0.499s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/lib'
+[0.499s] Level 1:colcon.colcon_core.shell:create_environment_hook('actuator', 'ld_library_path_lib')
+[0.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/ld_library_path_lib.ps1'
+[0.501s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/ld_library_path_lib.dsv'
+[0.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/ld_library_path_lib.sh'
+[0.501s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/bin'
+[0.501s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/lib/pkgconfig/actuator.pc'
+[0.501s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/lib/python3.8/site-packages'
+[0.501s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/bin'
+[0.502s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.ps1'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.dsv'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.sh'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.bash'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.zsh'
+[0.503s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/actuator/share/colcon-core/packages/actuator)
+[0.517s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sensor)
+[0.519s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor' for CMake module files
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor' for CMake config files
+[0.520s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor', 'cmake_prefix_path')
+[0.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/cmake_prefix_path.ps1'
+[0.522s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/cmake_prefix_path.dsv'
+[0.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/cmake_prefix_path.sh'
+[0.523s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/lib'
+[0.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor', 'ld_library_path_lib')
+[0.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/ld_library_path_lib.ps1'
+[0.525s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/ld_library_path_lib.dsv'
+[0.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/hook/ld_library_path_lib.sh'
+[0.526s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/bin'
+[0.526s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/lib/pkgconfig/sensor.pc'
+[0.526s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/lib/python3.8/site-packages'
+[0.526s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/sensor/bin'
+[0.528s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.ps1'
+[0.528s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.dsv'
+[0.529s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.sh'
+[0.529s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.bash'
+[0.530s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/sensor/share/sensor/package.zsh'
+[0.530s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/sensor/share/colcon-core/packages/sensor)
+[0.532s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(actuator)
+[0.534s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator' for CMake module files
+[0.535s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator' for CMake config files
+[0.535s] Level 1:colcon.colcon_core.shell:create_environment_hook('actuator', 'cmake_prefix_path')
+[0.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/cmake_prefix_path.ps1'
+[0.537s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/cmake_prefix_path.dsv'
+[0.537s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/cmake_prefix_path.sh'
+[0.537s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/lib'
+[0.538s] Level 1:colcon.colcon_core.shell:create_environment_hook('actuator', 'ld_library_path_lib')
+[0.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/ld_library_path_lib.ps1'
+[0.539s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/ld_library_path_lib.dsv'
+[0.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/hook/ld_library_path_lib.sh'
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/bin'
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/lib/pkgconfig/actuator.pc'
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/lib/python3.8/site-packages'
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/actuator/bin'
+[0.542s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.ps1'
+[0.542s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.dsv'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.sh'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.bash'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/package.zsh'
+[0.544s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/actuator/share/colcon-core/packages/actuator)
+[4.991s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/motor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/motor -- -j4 -l4
+[5.022s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/motor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/motor
+[5.041s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor)
+[5.043s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor' for CMake module files
+[5.043s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/motor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/rolling /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/motor
+[5.044s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor' for CMake config files
+[5.044s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor', 'cmake_prefix_path')
+[5.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/cmake_prefix_path.ps1'
+[5.045s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/cmake_prefix_path.dsv'
+[5.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/cmake_prefix_path.sh'
+[5.046s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/lib'
+[5.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor', 'ld_library_path_lib')
+[5.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/ld_library_path_lib.ps1'
+[5.047s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/ld_library_path_lib.dsv'
+[5.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/ld_library_path_lib.sh'
+[5.047s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/bin'
+[5.047s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/lib/pkgconfig/motor.pc'
+[5.048s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/lib/python3.8/site-packages'
+[5.048s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/bin'
+[5.049s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.ps1'
+[5.049s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.dsv'
+[5.049s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.sh'
+[5.049s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.bash'
+[5.050s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.zsh'
+[5.050s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/motor/share/colcon-core/packages/motor)
+[5.081s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor)
+[5.082s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor' for CMake module files
+[5.083s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor' for CMake config files
+[5.083s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor', 'cmake_prefix_path')
+[5.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/cmake_prefix_path.ps1'
+[5.084s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/cmake_prefix_path.dsv'
+[5.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/cmake_prefix_path.sh'
+[5.085s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/lib'
+[5.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor', 'ld_library_path_lib')
+[5.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/ld_library_path_lib.ps1'
+[5.086s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/ld_library_path_lib.dsv'
+[5.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/hook/ld_library_path_lib.sh'
+[5.086s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/bin'
+[5.086s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/lib/pkgconfig/motor.pc'
+[5.086s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/lib/python3.8/site-packages'
+[5.086s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor/bin'
+[5.087s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.ps1'
+[5.088s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.dsv'
+[5.088s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.sh'
+[5.088s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.bash'
+[5.089s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor/share/motor/package.zsh'
+[5.089s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/motor/share/colcon-core/packages/motor)
+[5.089s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor' with build type 'ament_cmake'
+[5.089s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor'
+[5.090s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.090s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.096s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator' with build type 'ament_cmake'
+[5.096s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator'
+[5.097s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.097s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.106s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/encoder_sensor': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor/lib:/application/rightbot_ws/src/actuator_interface/install/motor/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/encoder_sensor -- -j4 -l4
+[5.110s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/motor_actuator': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/motor/lib:/application/rightbot_ws/src/actuator_interface/install/actuator/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/motor_actuator -- -j4 -l4
+[5.173s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/encoder_sensor' returned '0': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor/lib:/application/rightbot_ws/src/actuator_interface/install/motor/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/encoder_sensor -- -j4 -l4
+[5.196s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/encoder_sensor': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor/lib:/application/rightbot_ws/src/actuator_interface/install/motor/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/encoder_sensor
+[5.217s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(encoder_sensor)
+[5.219s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor' for CMake module files
+[5.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/encoder_sensor' returned '0': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/sensor/lib:/application/rightbot_ws/src/actuator_interface/install/motor/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/encoder_sensor
+[5.219s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor' for CMake config files
+[5.219s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoder_sensor', 'cmake_prefix_path')
+[5.220s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/cmake_prefix_path.ps1'
+[5.221s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/cmake_prefix_path.dsv'
+[5.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/cmake_prefix_path.sh'
+[5.221s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib'
+[5.221s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoder_sensor', 'ld_library_path_lib')
+[5.222s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/ld_library_path_lib.ps1'
+[5.223s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/ld_library_path_lib.dsv'
+[5.223s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/ld_library_path_lib.sh'
+[5.223s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/bin'
+[5.223s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib/pkgconfig/encoder_sensor.pc'
+[5.223s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib/python3.8/site-packages'
+[5.223s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/bin'
+[5.224s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.ps1'
+[5.225s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.dsv'
+[5.225s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.sh'
+[5.225s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.bash'
+[5.225s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.zsh'
+[5.226s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/colcon-core/packages/encoder_sensor)
+[5.247s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(encoder_sensor)
+[5.250s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor' for CMake module files
+[5.250s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor' for CMake config files
+[5.251s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoder_sensor', 'cmake_prefix_path')
+[5.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/cmake_prefix_path.ps1'
+[5.253s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/cmake_prefix_path.dsv'
+[5.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/cmake_prefix_path.sh'
+[5.254s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib'
+[5.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('encoder_sensor', 'ld_library_path_lib')
+[5.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/ld_library_path_lib.ps1'
+[5.256s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/ld_library_path_lib.dsv'
+[5.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/hook/ld_library_path_lib.sh'
+[5.256s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/bin'
+[5.256s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib/pkgconfig/encoder_sensor.pc'
+[5.257s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib/python3.8/site-packages'
+[5.257s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/bin'
+[5.258s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.ps1'
+[5.259s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.dsv'
+[5.259s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.sh'
+[5.260s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.bash'
+[5.260s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/package.zsh'
+[5.261s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/colcon-core/packages/encoder_sensor)
+[9.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/motor_actuator' returned '0': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/motor/lib:/application/rightbot_ws/src/actuator_interface/install/actuator/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/motor_actuator -- -j4 -l4
+[9.408s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/motor_actuator': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/motor/lib:/application/rightbot_ws/src/actuator_interface/install/actuator/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/motor_actuator
+[9.431s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_actuator)
+[9.433s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator' for CMake module files
+[9.433s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/motor_actuator' returned '0': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/motor/lib:/application/rightbot_ws/src/actuator_interface/install/actuator/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/motor_actuator
+[9.433s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator' for CMake config files
+[9.434s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_actuator', 'cmake_prefix_path')
+[9.434s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/cmake_prefix_path.ps1'
+[9.435s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/cmake_prefix_path.dsv'
+[9.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/cmake_prefix_path.sh'
+[9.435s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib'
+[9.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_actuator', 'ld_library_path_lib')
+[9.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/ld_library_path_lib.ps1'
+[9.437s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/ld_library_path_lib.dsv'
+[9.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/ld_library_path_lib.sh'
+[9.437s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/bin'
+[9.437s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib/pkgconfig/motor_actuator.pc'
+[9.437s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib/python3.8/site-packages'
+[9.437s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/bin'
+[9.438s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.ps1'
+[9.439s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.dsv'
+[9.439s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.sh'
+[9.439s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.bash'
+[9.439s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.zsh'
+[9.439s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/colcon-core/packages/motor_actuator)
+[9.465s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_actuator)
+[9.466s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator' for CMake module files
+[9.466s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator' for CMake config files
+[9.466s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_actuator', 'cmake_prefix_path')
+[9.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/cmake_prefix_path.ps1'
+[9.468s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/cmake_prefix_path.dsv'
+[9.468s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/cmake_prefix_path.sh'
+[9.468s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib'
+[9.468s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_actuator', 'ld_library_path_lib')
+[9.469s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/ld_library_path_lib.ps1'
+[9.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/ld_library_path_lib.dsv'
+[9.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/hook/ld_library_path_lib.sh'
+[9.470s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/bin'
+[9.470s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib/pkgconfig/motor_actuator.pc'
+[9.470s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib/python3.8/site-packages'
+[9.470s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/bin'
+[9.471s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.ps1'
+[9.471s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.dsv'
+[9.472s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.sh'
+[9.472s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.bash'
+[9.472s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/package.zsh'
+[9.472s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/colcon-core/packages/motor_actuator)
+[9.472s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/application/rightbot_ws/src/actuator_interface/motor_test' with build type 'ament_cmake'
+[9.473s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/application/rightbot_ws/src/actuator_interface/motor_test'
+[9.473s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.474s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.489s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/motor_test': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor:/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor:/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib:/application/rightbot_ws/src/actuator_interface/install/sensor/lib:/application/rightbot_ws/src/actuator_interface/install/motor/lib:/application/rightbot_ws/src/actuator_interface/install/actuator/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/motor_test -- -j4 -l4
+[9.984s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/motor_test' returned '0': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor:/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor:/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib:/application/rightbot_ws/src/actuator_interface/install/sensor/lib:/application/rightbot_ws/src/actuator_interface/install/motor/lib:/application/rightbot_ws/src/actuator_interface/install/actuator/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /application/rightbot_ws/src/actuator_interface/build/motor_test -- -j4 -l4
+[10.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/application/rightbot_ws/src/actuator_interface/build/motor_test': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor:/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor:/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib:/application/rightbot_ws/src/actuator_interface/install/sensor/lib:/application/rightbot_ws/src/actuator_interface/install/motor/lib:/application/rightbot_ws/src/actuator_interface/install/actuator/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/motor_test
+[10.029s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_test)
+[10.030s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test' for CMake module files
+[10.031s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/application/rightbot_ws/src/actuator_interface/build/motor_test' returned '0': AMENT_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor:/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor:/application/rightbot_ws/src/actuator_interface/install/sensor:/application/rightbot_ws/src/actuator_interface/install/motor:/application/rightbot_ws/src/actuator_interface/install/actuator:/application/rightbot_ws/install/motor_test:/application/rightbot_ws/install/encoder_sensor:/application/rightbot_ws/install/sensor:/application/rightbot_ws/install/motor_actuator:/application/rightbot_ws/install/motor:/application/rightbot_ws/install/actuator:/opt/ros/rolling LD_LIBRARY_PATH=/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib:/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib:/application/rightbot_ws/src/actuator_interface/install/sensor/lib:/application/rightbot_ws/src/actuator_interface/install/motor/lib:/application/rightbot_ws/src/actuator_interface/install/actuator/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /application/rightbot_ws/src/actuator_interface/build/motor_test
+[10.031s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test' for CMake config files
+[10.031s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_test', 'cmake_prefix_path')
+[10.032s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/cmake_prefix_path.ps1'
+[10.032s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/cmake_prefix_path.dsv'
+[10.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/cmake_prefix_path.sh'
+[10.033s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/lib'
+[10.033s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_test', 'ld_library_path_lib')
+[10.034s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/ld_library_path_lib.ps1'
+[10.034s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/ld_library_path_lib.dsv'
+[10.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/ld_library_path_lib.sh'
+[10.035s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/bin'
+[10.035s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/lib/pkgconfig/motor_test.pc'
+[10.035s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/lib/python3.8/site-packages'
+[10.035s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/bin'
+[10.036s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.ps1'
+[10.036s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.dsv'
+[10.036s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.sh'
+[10.037s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.bash'
+[10.037s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.zsh'
+[10.037s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/motor_test/share/colcon-core/packages/motor_test)
+[10.058s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_test)
+[10.060s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test' for CMake module files
+[10.060s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test' for CMake config files
+[10.061s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_test', 'cmake_prefix_path')
+[10.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/cmake_prefix_path.ps1'
+[10.062s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/cmake_prefix_path.dsv'
+[10.062s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/cmake_prefix_path.sh'
+[10.062s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/lib'
+[10.063s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_test', 'ld_library_path_lib')
+[10.063s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/ld_library_path_lib.ps1'
+[10.064s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/ld_library_path_lib.dsv'
+[10.064s] INFO:colcon.colcon_core.shell:Creating environment hook '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/hook/ld_library_path_lib.sh'
+[10.064s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/bin'
+[10.064s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/lib/pkgconfig/motor_test.pc'
+[10.064s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/lib/python3.8/site-packages'
+[10.064s] Level 1:colcon.colcon_core.environment:checking '/application/rightbot_ws/src/actuator_interface/install/motor_test/bin'
+[10.065s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.ps1'
+[10.066s] INFO:colcon.colcon_core.shell:Creating package descriptor '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.dsv'
+[10.066s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.sh'
+[10.066s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.bash'
+[10.066s] INFO:colcon.colcon_core.shell:Creating package script '/application/rightbot_ws/src/actuator_interface/install/motor_test/share/motor_test/package.zsh'
+[10.067s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/application/rightbot_ws/src/actuator_interface/install/motor_test/share/colcon-core/packages/motor_test)
+[10.067s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.067s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.067s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.067s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.073s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.073s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.073s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.088s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.090s] INFO:colcon.colcon_core.shell:Creating prefix script '/application/rightbot_ws/src/actuator_interface/install/local_setup.ps1'
+[10.092s] INFO:colcon.colcon_core.shell:Creating prefix util module '/application/rightbot_ws/src/actuator_interface/install/_local_setup_util_ps1.py'
+[10.093s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/application/rightbot_ws/src/actuator_interface/install/setup.ps1'
+[10.094s] INFO:colcon.colcon_core.shell:Creating prefix script '/application/rightbot_ws/src/actuator_interface/install/local_setup.sh'
+[10.095s] INFO:colcon.colcon_core.shell:Creating prefix util module '/application/rightbot_ws/src/actuator_interface/install/_local_setup_util_sh.py'
+[10.095s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/application/rightbot_ws/src/actuator_interface/install/setup.sh'
+[10.096s] INFO:colcon.colcon_core.shell:Creating prefix script '/application/rightbot_ws/src/actuator_interface/install/local_setup.bash'
+[10.097s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/application/rightbot_ws/src/actuator_interface/install/setup.bash'
+[10.098s] INFO:colcon.colcon_core.shell:Creating prefix script '/application/rightbot_ws/src/actuator_interface/install/local_setup.zsh'
+[10.098s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/application/rightbot_ws/src/actuator_interface/install/setup.zsh'

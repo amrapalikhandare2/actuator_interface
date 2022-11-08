@@ -51,6 +51,7 @@ class MotorFeedback{
     uint32_t manufacturer_reg_fb_[1] = {0};
     uint32_t latched_fault_fb_[1] = {0};
 
+    int motor_request(void);
     int motorFeedback(int motor_id, MotorFeedback::feedback_s *feedback_s_m);
     
 };

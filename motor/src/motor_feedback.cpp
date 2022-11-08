@@ -9,6 +9,15 @@ MotorFeedback::~MotorFeedback(){
     
 }
 
+int MotorFeedback::motor_request(void)
+{
+
+	Socketcan_t data[1];
+	data[0].size = 1;
+	data[0].data = 0x00;
+	return socketcan_write(motor_sockets->motor_sync_fd, 128, 1, data);
+}
+
 double MotorFeedback::motor_cps_to_rpm(double counts_per_sec)
 {
 	
@@ -99,6 +108,7 @@ int MotorFeedback::motor_system_status_read(int motor_id, uint32_t *manufacturer
 
 int MotorFeedback::motorFeedback(int motor_id, MotorFeedback::feedback_s *feedback_s_m)
 {
+	motor_request();
 	motor_status_n_voltage_read(motor_id, status_register_fb_, battery_vol_fb_, 1);
 	motor_enc_read(motor_id, encoder_fb_, 1);
 	motor_vel_read(motor_id, vel_fb_, 1);

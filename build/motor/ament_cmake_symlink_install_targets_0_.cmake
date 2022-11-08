@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/application/rightbot_ws/src/actuator_interface/build/motor/test_actuator_interface" "/application/rightbot_ws/src/actuator_interface/build/motor/libmotor.so" "TARGETS" "test_actuator_interface" "motor" "DESTINATION" "lib/motor")
