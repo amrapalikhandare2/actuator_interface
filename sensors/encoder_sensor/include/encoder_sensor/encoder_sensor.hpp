@@ -19,7 +19,7 @@ class EncoderData {
 
     uint16_t status_m; 
     float battery_vol_m;
-    uint32_t pos_m; // position loop params
+    int32_t pos_m; 
     double vel_m;
     uint32_t manufacturer_reg_m;
     uint32_t latched_fault_m;

@@ -15,8 +15,8 @@ class MotorFeedback{
     int motor_id;
     std::shared_ptr<spdlog::logger> logger_;
 
-    bool init_enc = false ;
-    uint32_t err_enc = 0; 
+    bool init_enc ;
+    uint32_t err_enc ; 
 
     public:
     MotorFeedback(Sockets::SocketsSPtr motor_sockets_);
@@ -39,14 +39,14 @@ class MotorFeedback{
 
 
     int motor_status_n_voltage_read(int motor_id, uint16_t *status, float *battery_vol, int timeout);
-    int motor_enc_read(int motor_id, uint32_t *pos, int timeout);
+    int motor_enc_read(int motor_id, int32_t *pos, int timeout);
     double motor_cps_to_rpm(double counts_per_sec);
     int motor_vel_read(int motor_id, double *vel, int timeout);
     int motor_system_status_read(int motor_id, uint32_t *manufacturer_reg, uint32_t *latched_fault, int timeout);
 
     uint16_t status_register_fb_[1] = {0};
     float battery_vol_fb_[1] = {0};
-    uint32_t encoder_fb_[1] = {0};
+    int32_t encoder_fb_[1] = {0};
     double vel_fb_[1] = {0};
     uint32_t manufacturer_reg_fb_[1] = {0};
     uint32_t latched_fault_fb_[1] = {0};
