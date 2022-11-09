@@ -58,7 +58,8 @@ class EncoderSensor : public Sensor{
         std::condition_variable cv;
         
         
-        // std::queue<> q_encoder_data_;
+        std::queue<EncoderData> q_encoder_data_;
+        EncoderData encoder_data_q_element_;
         
 };
 

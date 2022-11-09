@@ -3,7 +3,7 @@ using namespace std;
 
 EncoderSensor::EncoderSensor(int motor_id, Sockets::SocketsSPtr motor_sockets){
     
-    // init_json();
+    init_json();
     logger_ = spdlog::get("actuator_interface")->clone("encoder_sensor");
     read_motor_data_thread_ = std::thread(&EncoderSensor::readMotorData,this);
     motor_feedback_ = std::make_shared<MotorFeedback>(motor_sockets);
@@ -22,7 +22,7 @@ EncoderSensor::~EncoderSensor() {
 
 void EncoderSensor::init_json(){
 
-    JsonRead parser("/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/config.json");
+    JsonRead parser("/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/motor_json.json");
 
     if(!parser.parse())
         throw std::invalid_argument("Parsing error in Dummy Sensor 1s");
@@ -86,14 +86,12 @@ void EncoderSensor::readMotorData(){
         {
             std::lock_guard<std::mutex> lk(read_mutex_);
 
-            
-
             readData(motor_id_, &encoder_data_);
 
             if(read_err_ == 0){
                 message_received = true;
+                q_encoder_data_.push(encoder_data_);
             }
-
             
         }
         cv.notify_one();
@@ -105,10 +103,20 @@ void EncoderSensor::getData(Json::Value &sensor_data){
     
     read_mutex_.lock();
 
-    sensor_data["counts"] = sensor_data_["counts"];
-    sensor_data["state"] = sensor_data_["state"];
+    // sensor_data["counts"] = sensor_data_["counts"];
+    // sensor_data["state"] = sensor_data_["state"];
     
-    std::cout<< "Data Read Sensor 1" <<std::endl;
-    
+    // std::cout<< "Data Read Sensor 1" <<std::endl;
+    if(!q_encoder_data_.empty()){
+        encoder_data_q_element_ = q_encoder_data_.front();
+        q_encoder_data_.pop();
+    }
+    sensor_data["status"]= encoder_data_q_element_.status_m;
+    sensor_data["battery_voltage"] = encoder_data_q_element_.battery_vol_m;
+    sensor_data["counts"]= encoder_data_q_element_.pos_m;
+    sensor_data["velocity"]= encoder_data_q_element_.vel_m;
+    sensor_data["manufacturer_register"]= encoder_data_q_element_.manufacturer_reg_m;
+    sensor_data["latched_fault"]= encoder_data_q_element_.latched_fault_m;
+
     read_mutex_.unlock();
 }
