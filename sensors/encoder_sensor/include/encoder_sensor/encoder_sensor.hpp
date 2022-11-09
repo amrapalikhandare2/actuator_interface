@@ -8,7 +8,7 @@
 #include <sensor/sensor.hpp>
 #include <sockets.hpp>
 #include <motor_feedback.hpp>
-
+#include <queue>
 class EncoderData {
 
     public:
@@ -40,16 +40,22 @@ class EncoderSensor : public Sensor{
         std::shared_ptr<spdlog::logger> logger_;
 
         std::thread update_data_thread_;
-        void updateData();
+        std::thread read_motor_data_thread_;
+        void readMotorData();
         Json::Value sensor_data_;
         std::mutex read_mutex_;
         void init_json();
         int motor_id_;
         EncoderData encoder_data_;
         MotorFeedback::MotorFeedbackSPtr motor_feedback_;
-       
+        bool message_received;
+        void updateData();
+        int read_err_;
         void readData(int motor_id, EncoderData *encoder_data);
         MotorFeedback::feedback_s feedback_s_m_;
+        
+        
+        // std::queue<> q_encoder_data_;
         
 };
 

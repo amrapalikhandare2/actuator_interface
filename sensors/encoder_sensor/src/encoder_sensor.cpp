@@ -1,14 +1,17 @@
 #include <encoder_sensor/encoder_sensor.hpp>
 using namespace std;
-
+std::condition_variable cv;
 
 EncoderSensor::EncoderSensor(int motor_id, Sockets::SocketsSPtr motor_sockets){
     
     // init_json();
     logger_ = spdlog::get("actuator_interface")->clone("encoder_sensor");
-    update_data_thread_ = std::thread(&EncoderSensor::updateData,this);
+    read_motor_data_thread_ = std::thread(&EncoderSensor::readMotorData,this);
     motor_feedback_ = std::make_shared<MotorFeedback>(motor_sockets);
     motor_id_ = motor_id;
+    read_err_ = 0;
+    update_data_thread_ = std::thread();
+    message_received = false;
 }
 
 EncoderSensor::~EncoderSensor() {
@@ -29,7 +32,7 @@ void EncoderSensor::init_json(){
 }
 void EncoderSensor::readData(int motor_id, EncoderData *encoder_data){
 
-    motor_feedback_->motorFeedback(motor_id, &feedback_s_m_);
+    read_err_ =  motor_feedback_->motorFeedback(motor_id, &feedback_s_m_);
     encoder_data->status_m = feedback_s_m_.status_m;
     encoder_data->battery_vol_m = feedback_s_m_.battery_vol_m;
     encoder_data->pos_m = feedback_s_m_.pos_m;
@@ -44,35 +47,57 @@ void EncoderSensor::readData(int motor_id, EncoderData *encoder_data){
     logger_->info("Motor Manufacturer Reg: {}",encoder_data->manufacturer_reg_m );
     logger_->info("Motor Latched Fault: {}",encoder_data->latched_fault_m );
 
-    std::cout << "Motor Sensor: " << encoder_data->status_m << std::endl; 
-    std::cout << "Motor Battery: " << encoder_data->battery_vol_m << std::endl; 
-    std::cout << "Motor Position: " << encoder_data->pos_m << std::endl; 
-    std::cout << "Motor Velocity: " << encoder_data->vel_m << std::endl; 
-    std::cout << "Motor Manufacturer Reg: " << encoder_data->manufacturer_reg_m << std::endl; 
-    std::cout << "Motor Latched Fault: " << encoder_data->latched_fault_m << std::endl; 
+    // std::cout << "Motor Sensor: " << encoder_data->status_m << std::endl; 
+    // std::cout << "Motor Battery: " << encoder_data->battery_vol_m << std::endl; 
+    // std::cout << "Motor Position: " << encoder_data->pos_m << std::endl; 
+    // std::cout << "Motor Velocity: " << encoder_data->vel_m << std::endl; 
+    // std::cout << "Motor Manufacturer Reg: " << encoder_data->manufacturer_reg_m << std::endl; 
+    // std::cout << "Motor Latched Fault: " << encoder_data->latched_fault_m << std::endl; 
     
     
 };
 
+
 void EncoderSensor::updateData(){
+
+    
+    while(true){
+        std::unique_lock<std::mutex> lk(read_mutex_);
+        std::cout << "Waiting... \n";
+
+        cv.wait(lk, [this] { return message_received; });
+        std::cerr << "...finished waiting \n";
+
+        read_mutex_.lock();
+
+        message_received = false;
+
+        read_mutex_.unlock();
+    }
+
+}
+
+void EncoderSensor::readMotorData(){
 
     
     while(true){
     
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
 
-        read_mutex_.lock();
+        {
+            std::lock_guard<std::mutex> lk(read_mutex_);
 
-        readData(motor_id_, &encoder_data_);
+            read_mutex_.lock();
 
-        // sensor_data_["counts"]= sensor_data_["counts"].asInt() + 1;
-        // sensor_data_["state"] = "running";
+            readData(motor_id_, &encoder_data_);
 
-        // std::cout<< "Data Updated Sensor 1" <<std::endl;
+            if(read_err_ = 0){
+                message_received = true;
+            }
 
-
-
-        read_mutex_.unlock();
+            read_mutex_.unlock();
+        }
+        cv.notify_one();
     }
 
 }

@@ -5,6 +5,10 @@ MotorFeedback::MotorFeedback(Sockets::SocketsSPtr motor_sockets_){
     motor_sockets = motor_sockets_ ;
 	init_enc = false ;
     err_enc = 0; 
+	err_pdo_1_ = 0;
+    err_pdo_2_ = 0;
+    err_pdo_3_ = 0;
+    err_pdo_4_ = 0;
 }
 
 MotorFeedback::~MotorFeedback(){
@@ -111,16 +115,49 @@ int MotorFeedback::motor_system_status_read(int motor_id, uint32_t *manufacturer
 int MotorFeedback::motorFeedback(int motor_id, MotorFeedback::feedback_s *feedback_s_m)
 {
 	motor_request();
-	motor_status_n_voltage_read(motor_id, status_register_fb_, battery_vol_fb_, 1);
-	motor_enc_read(motor_id, encoder_fb_, 1);
-	motor_vel_read(motor_id, vel_fb_, 1);
-	motor_system_status_read(motor_id, manufacturer_reg_fb_, latched_fault_fb_, 1);
-	
-	feedback_s_m->status_m = status_register_fb_[0];
-	feedback_s_m->battery_vol_m = battery_vol_fb_[0];
-	feedback_s_m->pos_m = encoder_fb_[0];
-	feedback_s_m->vel_m = vel_fb_[0];
-	feedback_s_m->manufacturer_reg_m = manufacturer_reg_fb_[0];
-	feedback_s_m->latched_fault_m = latched_fault_fb_[0];
+	err_pdo_1_ = motor_status_n_voltage_read(motor_id, status_register_fb_, battery_vol_fb_, 1);
+	err_pdo_2_ = motor_enc_read(motor_id, encoder_fb_, 1);
+	err_pdo_3_ = motor_vel_read(motor_id, vel_fb_, 1);
+	err_pdo_4_ = motor_system_status_read(motor_id, manufacturer_reg_fb_, latched_fault_fb_, 1);
+
+	if(err_pdo_1_ == 0){
+		feedback_s_m->status_m = status_register_fb_[0];
+		feedback_s_m->battery_vol_m = battery_vol_fb_[0];
+	}
+	else{
+		feedback_s_m->status_m = -1;
+		feedback_s_m->battery_vol_m = -1;
+	}
+
+	if(err_pdo_2_ == 0){
+		feedback_s_m->pos_m = encoder_fb_[0];
+	}
+	else{
+		feedback_s_m->pos_m = -1;
+	}
+
+	if(err_pdo_3_ == 0){
+		feedback_s_m->vel_m = vel_fb_[0];
+	}
+	else{
+		feedback_s_m->vel_m = -1;
+	}
+
+	if(err_pdo_4_ == 0){
+		feedback_s_m->manufacturer_reg_m = manufacturer_reg_fb_[0];
+		feedback_s_m->latched_fault_m = latched_fault_fb_[0];
+	}
+	else{
+		feedback_s_m->manufacturer_reg_m = -1;
+		feedback_s_m->latched_fault_m = -1;
+	}
+
+	if (( err_pdo_1_ != 0 ) && ( err_pdo_2_ != 0 ) && ( err_pdo_3_ != 0 ) && ( err_pdo_4_ != 0 )){
+		return -1;
+	}
+	else{
+		return 0;
+	}
+
 
 }

@@ -37,6 +37,10 @@ class MotorFeedback{
     }feedback_s;
 
 
+    int err_pdo_1_;
+    int err_pdo_2_;
+    int err_pdo_3_;
+    int err_pdo_4_;
 
     int motor_status_n_voltage_read(int motor_id, uint16_t *status, float *battery_vol, int timeout);
     int motor_enc_read(int motor_id, int32_t *pos, int timeout);
