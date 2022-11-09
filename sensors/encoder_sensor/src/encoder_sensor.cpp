@@ -10,13 +10,15 @@ EncoderSensor::EncoderSensor(int motor_id, Sockets::SocketsSPtr motor_sockets){
     motor_feedback_ = std::make_shared<MotorFeedback>(motor_sockets);
     motor_id_ = motor_id;
     read_err_ = 0;
-    update_data_thread_ = std::thread();
+    update_data_thread_ = std::thread(&EncoderSensor::updateData, this);
     message_received = false;
 }
 
 EncoderSensor::~EncoderSensor() {
     
+    read_motor_data_thread_.join();
     update_data_thread_.join();
+    
 }
 
 void EncoderSensor::init_json(){

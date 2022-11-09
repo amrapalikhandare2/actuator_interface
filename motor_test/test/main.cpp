@@ -26,6 +26,10 @@ Sockets::SocketsSPtr motor_sockets_1;
 MotorActuator::MotorActuatorSPtr motor_actuator_1;
 EncoderSensor::EncoderSensorSPtr motor_encoder_sensor_1;
 
+Sockets::SocketsSPtr motor_sockets_2;
+MotorActuator::MotorActuatorSPtr motor_actuator_2;
+EncoderSensor::EncoderSensorSPtr motor_encoder_sensor_2;
+
 Json::Value actuator_data;
 std::mutex sync_mutex; // for sync of message_received variable
 
@@ -46,11 +50,16 @@ int main() {
     spdlog::register_logger(root_logger);
 
     motor_sockets_1 = std::make_shared<Sockets>(12);
+    motor_sockets_2 = std::make_shared<Sockets>(13);
+
     motor_actuator_1 = std::make_shared<MotorActuator>(12,motor_sockets_1);
+    motor_actuator_2 = std::make_shared<MotorActuator>(13,motor_sockets_2);
 
     motor_encoder_sensor_1 = std::make_shared<EncoderSensor>(12,motor_sockets_1);
+    motor_encoder_sensor_2 = std::make_shared<EncoderSensor>(13,motor_sockets_2);
 
     motor_actuator_1->motorCommand(12, "velocity", motor_actuator_1->setPosition(0,0,0,0,0), motor_actuator_1->setVelocity(1,15,10,1,1) );
+    motor_actuator_2->motorCommand(13, "velocity", motor_actuator_2->setPosition(0,0,0,0,0), motor_actuator_2->setVelocity(1,15,10,1,1) );
 
 
     
