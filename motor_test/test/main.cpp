@@ -63,21 +63,23 @@ int main() {
 
     motor_actuator_1->motorCommand(12, "velocity", motor_actuator_1->setPosition(0,0,0,0,0), motor_actuator_1->setVelocity(1,15,10,1,1) );
     // motor_actuator_2->motorCommand(13, "velocity", motor_actuator_2->setPosition(0,0,0,0,0), motor_actuator_2->setVelocity(1,15,10,1,1) );
-    JsonRead parser("/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/motor_json.json");
+    JsonRead parser("/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/motor_data.json");
 
     if(!parser.parse())
-        throw std::invalid_argument("Parsing error in Dummy Sensor 1s");
+        throw std::invalid_argument("test: Parsing error in Dummy Sensor 1s");
 
     parser.getValue(sensor_data);
-
-    motor_encoder_sensor_1->getData(sensor_data_1);
+   
+    while(true){
+	    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    	    motor_encoder_sensor_1->getData(sensor_data_1);
     
-    std::cout << "test: status: " << sensor_data_1["status"].asInt64() << std::endl;
-    std::cout << "test: battery voltage: " << sensor_data_1["battery_voltage"].asInt64() << std::endl;
-    std::cout << "test: counts: " << sensor_data_1["counts"].asInt64() << std::endl;
-    std::cout << "test: velocity: " << sensor_data_1["velocity"].asInt64() << std::endl;
+            std::cout << "test: status: " << sensor_data_1["status"].asInt64() << std::endl;
+            std::cout << "test: battery voltage: " << sensor_data_1["battery_voltage"].asInt64() << std::endl;
+            std::cout << "test: counts: " << sensor_data_1["counts"].asInt64() << std::endl;
+            std::cout << "test: velocity: " << sensor_data_1["velocity"].asInt64() << std::endl;
 
-    
+    }
 
     return 0;
 

@@ -22,7 +22,7 @@ EncoderSensor::~EncoderSensor() {
 
 void EncoderSensor::init_json(){
 
-    JsonRead parser("/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/motor_json.json");
+    JsonRead parser("/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/motor_data.json");
 
     if(!parser.parse())
         throw std::invalid_argument("Parsing error in Dummy Sensor 1s");
@@ -64,10 +64,10 @@ void EncoderSensor::updateData(){
     
     while(true){
         std::unique_lock<std::mutex> lk(read_mutex_);
-        std::cout << "Waiting... \n";
+        //std::cout << "Waiting... \n";
 
         cv.wait(lk, [this] { return message_received; });
-        std::cout << "...finished waiting \n";
+        //std::cout << "...finished waiting \n";
 
         message_received = false;
 
