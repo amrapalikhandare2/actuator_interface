@@ -9,6 +9,8 @@
 #include <sockets.hpp>
 #include <motor_feedback.hpp>
 #include <queue>
+#include <condition_variable>
+
 class EncoderData {
 
     public:
@@ -53,6 +55,7 @@ class EncoderSensor : public Sensor{
         int read_err_;
         void readData(int motor_id, EncoderData *encoder_data);
         MotorFeedback::feedback_s feedback_s_m_;
+        std::condition_variable cv;
         
         
         // std::queue<> q_encoder_data_;

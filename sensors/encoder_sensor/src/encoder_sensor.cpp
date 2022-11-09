@@ -1,6 +1,5 @@
 #include <encoder_sensor/encoder_sensor.hpp>
 using namespace std;
-std::condition_variable cv;
 
 EncoderSensor::EncoderSensor(int motor_id, Sockets::SocketsSPtr motor_sockets){
     
@@ -68,13 +67,11 @@ void EncoderSensor::updateData(){
         std::cout << "Waiting... \n";
 
         cv.wait(lk, [this] { return message_received; });
-        std::cerr << "...finished waiting \n";
-
-        read_mutex_.lock();
+        std::cout << "...finished waiting \n";
 
         message_received = false;
 
-        read_mutex_.unlock();
+        lk.unlock();
     }
 
 }
@@ -89,7 +86,7 @@ void EncoderSensor::readMotorData(){
         {
             std::lock_guard<std::mutex> lk(read_mutex_);
 
-            read_mutex_.lock();
+            
 
             readData(motor_id_, &encoder_data_);
 
@@ -97,7 +94,7 @@ void EncoderSensor::readMotorData(){
                 message_received = true;
             }
 
-            read_mutex_.unlock();
+            
         }
         cv.notify_one();
     }
