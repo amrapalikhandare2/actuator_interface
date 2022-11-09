@@ -90,7 +90,7 @@ void EncoderSensor::readMotorData(){
 
             readData(motor_id_, &encoder_data_);
 
-            if(read_err_ = 0){
+            if(read_err_ == 0){
                 message_received = true;
             }
 
