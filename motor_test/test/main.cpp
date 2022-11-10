@@ -85,7 +85,7 @@ int main() {
     actuator_write_1["decel"] = 1;
    
    motor_actuator_1->writeData(actuator_write_1);
-   motor_actuator_1->writeData(actuator_write_2);
+   //motor_actuator_1->writeData(actuator_write_2);
 
     while(true){
 	    std::this_thread::sleep_for(std::chrono::milliseconds(10));
@@ -98,14 +98,14 @@ int main() {
             std::cout << "test: manufacturer register: " << sensor_data_1["manufacturer_register"].asInt64() << std::endl;
             std::cout << "test:  latched fault: " << sensor_data_1["latched_fault"].asInt64() << std::endl;
 
-            motor_encoder_sensor_1->getData(sensor_data_2);
+            motor_encoder_sensor_2->getData(sensor_data_2);
     
-            std::cout << "test: status: " << sensor_data_2["status"].asInt64() << std::endl;
-            std::cout << "test: battery voltage: " << sensor_data_2["battery_voltage"].asDouble() << std::endl;
-            std::cout << "test: counts: " << sensor_data_2["counts"].asInt64() << std::endl;
-            std::cout << "test: velocity: " << sensor_data_2["velocity"].asDouble() << std::endl;
-            std::cout << "test: manufacturer register: " << sensor_data_2["manufacturer_register"].asInt64() << std::endl;
-            std::cout << "test:  latched fault: " << sensor_data_2["latched_fault"].asInt64() << std::endl;
+            std::cout << "test2: status: " << sensor_data_2["status"].asInt64() << std::endl;
+            std::cout << "test2: battery voltage: " << sensor_data_2["battery_voltage"].asDouble() << std::endl;
+            std::cout << "test2: counts: " << sensor_data_2["counts"].asInt64() << std::endl;
+            std::cout << "test2: velocity: " << sensor_data_2["velocity"].asDouble() << std::endl;
+            std::cout << "test2: manufacturer register: " << sensor_data_2["manufacturer_register"].asInt64() << std::endl;
+            std::cout << "test2:  latched fault: " << sensor_data_2["latched_fault"].asInt64() << std::endl;
 
     }
 
