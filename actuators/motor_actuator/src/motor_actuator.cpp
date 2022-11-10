@@ -25,7 +25,7 @@ MotorActuator::~MotorActuator() = default;
 void MotorActuator::init_json() {
 
     JsonRead parser(
-            "/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/write_data.json");
+            "/application/rightbot_ws/src/actuator_interface/actuators/motor_actuator/config/write_data.json");
 
     if (!parser.parse())
         throw std::invalid_argument("Parsing error in motor actuator");
