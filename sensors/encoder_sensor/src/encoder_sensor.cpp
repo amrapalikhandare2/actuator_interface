@@ -41,12 +41,12 @@ void EncoderSensor::readData(int motor_id, EncoderData *encoder_data){
     encoder_data->manufacturer_reg_m = feedback_s_m_.manufacturer_reg_m;
     encoder_data->latched_fault_m = feedback_s_m_.latched_fault_m;
 
-    logger_->info("Motor Sensor: {}",encoder_data->status_m );
-    logger_->info("Motor Battery: {}",encoder_data->battery_vol_m );
-    logger_->info("Motor Position: {}",encoder_data->pos_m );
-    logger_->info("Motor Velocity: {}",encoder_data->vel_m );
-    logger_->info("Motor Manufacturer Reg: {}",encoder_data->manufacturer_reg_m );
-    logger_->info("Motor Latched Fault: {}",encoder_data->latched_fault_m );
+    logger_->debug("Motor Sensor: {}",encoder_data->status_m );
+    logger_->debug("Motor Battery: {}",encoder_data->battery_vol_m );
+    logger_->debug("Motor Position: {}",encoder_data->pos_m );
+    logger_->debug("Motor Velocity: {}",encoder_data->vel_m );
+    logger_->debug("Motor Manufacturer Reg: {}",encoder_data->manufacturer_reg_m );
+    logger_->debug("Motor Latched Fault: {}",encoder_data->latched_fault_m );
 
     // std::cout << "Motor Sensor: " << encoder_data->status_m << std::endl; 
     // std::cout << "Motor Battery: " << encoder_data->battery_vol_m << std::endl; 

@@ -29,9 +29,6 @@ public:
     ~MotorActuator();
 
     void writeData(Json::Value &actuator_data) override;
-    MotorControls::position_cmd_t setPosition(double timeout, double relative_pos, double max_vel, double accel, double decel);
-    MotorControls::velocity_cmd_t setVelocity(double timeout, double velocity, double max_vel, double accel, double decel);
-    bool motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element);
     
 private:
 
@@ -43,6 +40,13 @@ private:
     // bool motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element);
     int motor_id_;
     void init_json();
+    MotorControls::position_cmd_t position_cmd_received_;
+    MotorControls::velocity_cmd_t velocity_cmd_received_;
+    MotorControls::position_cmd_t setPosition(double timeout, double relative_pos, double max_vel, double accel, double decel);
+    MotorControls::velocity_cmd_t setVelocity(double timeout, double velocity, double max_vel, double accel, double decel);
+    bool motorCommand(int motor_id, std::string command_type, MotorControls::position_cmd_t position_cmd_element, MotorControls::velocity_cmd_t velocity_cmd_element);
+    
+
     
 
 };

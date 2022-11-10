@@ -19,6 +19,7 @@ std::condition_variable cv;
 // 3) for the condition variable cv
 std::mutex cv_m;
 
+std::shared_ptr<spdlog::logger> logger_;
 bool message_received = false;
 
 MotorTest::MotorTestSPtr motor_test;
@@ -36,6 +37,10 @@ std::mutex sync_mutex; // for sync of message_received variable
 Json::Value sensor_data;
 
 Json::Value sensor_data_1;
+Json::Value sensor_data_2;
+
+Json::Value actuator_write_1;
+Json::Value actuator_write_2;
 
 int main() {
 
@@ -52,6 +57,8 @@ int main() {
     root_logger->set_level(spdlog::level::debug);
     spdlog::register_logger(root_logger);
 
+    // logger_ = spdlog::get("actuator_interface")->clone("motor_test");
+
     motor_sockets_1 = std::make_shared<Sockets>(12);
     motor_sockets_2 = std::make_shared<Sockets>(13);
 
@@ -61,23 +68,44 @@ int main() {
     motor_encoder_sensor_1 = std::make_shared<EncoderSensor>(12,motor_sockets_1);
     motor_encoder_sensor_2 = std::make_shared<EncoderSensor>(13,motor_sockets_2);
 
-    motor_actuator_1->motorCommand(12, "velocity", motor_actuator_1->setPosition(0,0,0,0,0), motor_actuator_1->setVelocity(1,15,10,1,1) );
+    // motor_actuator_1->motorCommand(12, "velocity", motor_actuator_1->setPosition(0,0,0,0,0), motor_actuator_1->setVelocity(1,15,10,1,1) );
     // motor_actuator_2->motorCommand(13, "velocity", motor_actuator_2->setPosition(0,0,0,0,0), motor_actuator_2->setVelocity(1,15,10,1,1) );
-    JsonRead parser("/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/motor_data.json");
+    // JsonRead parser("/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/motor_data.json");
 
-    if(!parser.parse())
-        throw std::invalid_argument("test: Parsing error in Dummy Sensor 1s");
+    // if(!parser.parse())
+    //     throw std::invalid_argument("test: Parsing error in Dummy Sensor 1s");
 
-    parser.getValue(sensor_data);
+    // parser.getValue(sensor_data);
+    actuator_write_1["timeout"] = 10;
+    actuator_write_1["mode"] = "velocity";
+    actuator_write_1["velocity"] = 15;
+    actuator_write_1["relative_pos"] = 0;
+    actuator_write_1["max_vel"] = 10;
+    actuator_write_1["accel"] = 1;
+    actuator_write_1["decel"] = 1;
    
+   motor_actuator_1->writeData(actuator_write_1);
+   motor_actuator_1->writeData(actuator_write_2);
+
     while(true){
 	    std::this_thread::sleep_for(std::chrono::milliseconds(10));
     	    motor_encoder_sensor_1->getData(sensor_data_1);
     
             std::cout << "test: status: " << sensor_data_1["status"].asInt64() << std::endl;
-            std::cout << "test: battery voltage: " << sensor_data_1["battery_voltage"].asInt64() << std::endl;
+            std::cout << "test: battery voltage: " << sensor_data_1["battery_voltage"].asDouble() << std::endl;
             std::cout << "test: counts: " << sensor_data_1["counts"].asInt64() << std::endl;
-            std::cout << "test: velocity: " << sensor_data_1["velocity"].asInt64() << std::endl;
+            std::cout << "test: velocity: " << sensor_data_1["velocity"].asDouble() << std::endl;
+            std::cout << "test: manufacturer register: " << sensor_data_1["manufacturer_register"].asInt64() << std::endl;
+            std::cout << "test:  latched fault: " << sensor_data_1["latched_fault"].asInt64() << std::endl;
+
+            motor_encoder_sensor_1->getData(sensor_data_2);
+    
+            std::cout << "test: status: " << sensor_data_2["status"].asInt64() << std::endl;
+            std::cout << "test: battery voltage: " << sensor_data_2["battery_voltage"].asDouble() << std::endl;
+            std::cout << "test: counts: " << sensor_data_2["counts"].asInt64() << std::endl;
+            std::cout << "test: velocity: " << sensor_data_2["velocity"].asDouble() << std::endl;
+            std::cout << "test: manufacturer register: " << sensor_data_2["manufacturer_register"].asInt64() << std::endl;
+            std::cout << "test:  latched fault: " << sensor_data_2["latched_fault"].asInt64() << std::endl;
 
     }
 

@@ -25,10 +25,10 @@ MotorActuator::~MotorActuator() = default;
 void MotorActuator::init_json() {
 
     JsonRead parser(
-            "/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/config.json");
+            "/application/rightbot_ws/src/actuator_interface/sensors/encoder_sensor/config/write_data.json");
 
     if (!parser.parse())
-        throw std::invalid_argument("Parsing error in Actuator 1s");
+        throw std::invalid_argument("Parsing error in motor actuator");
 
     parser.getValue(actuator_data_);
 }
@@ -61,7 +61,35 @@ MotorControls::velocity_cmd_t MotorActuator::setVelocity(double timeout, double 
 
 void MotorActuator::writeData(Json::Value &actuator_data) {
 
-    //
+    actuator_data_["timeout"] = actuator_data["timeout"];
+    actuator_data_["mode"] = actuator_data["mode"];
+    actuator_data_["velocity"] = actuator_data["velocity"];
+    actuator_data_["relative_pos"] = actuator_data["relative_pos"];
+    actuator_data_["max_vel"] = actuator_data["max_vel"];
+    actuator_data_["accel"] = actuator_data["accel"];
+    actuator_data_["decel"] = actuator_data["decel"];
+
+    if (actuator_data_["mode"].asString() == "velocity"){
+        position_cmd_received_ = {0};
+        velocity_cmd_received_.timeout = actuator_data_["timeout"].asDouble();
+        velocity_cmd_received_.velocity = actuator_data_["velocity"].asDouble();
+        velocity_cmd_received_.max_vel = actuator_data_["max_vel"].asDouble();
+        velocity_cmd_received_.accel = actuator_data_["accel"].asDouble();
+        velocity_cmd_received_.decel = actuator_data_["decel"].asDouble();
+        motor_controls_->motor_command(motor_id_, "velocity", position_cmd_received_, velocity_cmd_received_);
+
+    }
+
+    if (actuator_data_["mode"].asString()== "position"){
+        velocity_cmd_received_ = {0};
+        position_cmd_received_.timeout = actuator_data_["timeout"].asDouble();
+        position_cmd_received_.relative_pos = actuator_data_["relative_pos"].asDouble();
+        position_cmd_received_.max_vel = actuator_data_["max_vel"].asDouble();
+        position_cmd_received_.accel = actuator_data_["accel"].asDouble();
+        position_cmd_received_.decel = actuator_data_["decel"].asDouble();
+        motor_controls_->motor_command(motor_id_, "position", position_cmd_received_, velocity_cmd_received_);
+        
+    }
 
 
 
