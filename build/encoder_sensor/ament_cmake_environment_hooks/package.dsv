@@ -1,4 +1,0 @@
-source;share/encoder_sensor/local_setup.bash
-source;share/encoder_sensor/local_setup.dsv
-source;share/encoder_sensor/local_setup.sh
-source;share/encoder_sensor/local_setup.zsh

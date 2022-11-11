@@ -1,1 +1,0 @@
-/application/rightbot_ws/src/actuator_interface/build/motor_test/ament_cmake_core/motor_testConfig-version.cmake

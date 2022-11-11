@@ -1,1 +1,0 @@
-/application/rightbot_ws/src/actuator_interface/build/encoder_sensor/ament_cmake_core/encoder_sensorConfig-version.cmake

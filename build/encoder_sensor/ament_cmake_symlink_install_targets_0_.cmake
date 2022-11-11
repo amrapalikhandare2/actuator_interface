@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/application/rightbot_ws/src/actuator_interface/build/encoder_sensor/encoder_sensor_test" "TARGETS" "encoder_sensor_test" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib/encoder_sensor" "RUNTIME_DESTINATION" "lib/encoder_sensor" "DESTINATION" "lib/encoder_sensor")

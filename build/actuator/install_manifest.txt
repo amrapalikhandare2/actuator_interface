@@ -1,4 +1,0 @@
-/application/rightbot_ws/src/actuator_interface/install/actuator/include//actuator/actuator.hpp
-/application/rightbot_ws/src/actuator_interface/install/actuator/lib/libactuator.so
-/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/cmake/actuatorExport.cmake
-/application/rightbot_ws/src/actuator_interface/install/actuator/share/actuator/cmake/actuatorExport-noconfig.cmake

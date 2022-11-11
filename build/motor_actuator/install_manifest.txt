@@ -1,4 +1,0 @@
-/application/rightbot_ws/src/actuator_interface/install/motor_actuator/include//motor_actuator/motor_actuator.hpp
-/application/rightbot_ws/src/actuator_interface/install/motor_actuator/lib/libmotor_actuator.so
-/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/cmake/motor_actuatorExport.cmake
-/application/rightbot_ws/src/actuator_interface/install/motor_actuator/share/motor_actuator/cmake/motor_actuatorExport-noconfig.cmake

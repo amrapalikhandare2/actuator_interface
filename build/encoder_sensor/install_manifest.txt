@@ -1,4 +1,0 @@
-/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/include//encoder_sensor/encoder_sensor.hpp
-/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/lib/libencoder_sensor.so
-/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/cmake/encoder_sensorExport.cmake
-/application/rightbot_ws/src/actuator_interface/install/encoder_sensor/share/encoder_sensor/cmake/encoder_sensorExport-noconfig.cmake
