@@ -9,9 +9,13 @@ BarcodeSensor::BarcodeSensor(int barcode_id, int barcode_base_id) {
     // init_json();
 
     barcode_id_ = barcode_id;
+    
     read_barcode_data_thread_ = std::thread(&BarcodeSensor::readBarcodeData,this);
+    
     update_data_thread_ = std::thread(&BarcodeSensor::updateData, this);
+    
     gls_barcode_ = std::make_shared<GlsBarcode>(barcode_id_, barcode_base_id);
+    
     gls_barcode_->gls_init(barcode_id_);
     std::this_thread::sleep_for(std::chrono::seconds(2));
     gls_barcode_->gls_enable(barcode_id_);
@@ -94,10 +98,17 @@ void BarcodeSensor::getData(Json::Value &sensor_data) {
     sensor_data["x"] = encoder_barcode_q_element_.x_b;
     sensor_data["y"] = encoder_barcode_q_element_.y_b;
     sensor_data["ang"] = encoder_barcode_q_element_.ang_b;
-    sensor_data_["sensor_time"] = static_cast<uint32_t>(encoder_barcode_q_element_.sensor_time_b);
-    sensor_data_["decode_time"] = static_cast<uint32_t>(encoder_barcode_q_element_.decode_time_b);
-    sensor_data_["tag_x"] = static_cast<uint32_t>(encoder_barcode_q_element_.tag_x_b);
-    sensor_data_["tag_y"] = static_cast<uint32_t>(encoder_barcode_q_element_.tag_y_b);
+    sensor_data["sensor_time"] = static_cast<uint32_t>(encoder_barcode_q_element_.sensor_time_b);
+    sensor_data["decode_time"] = static_cast<uint32_t>(encoder_barcode_q_element_.decode_time_b);
+    sensor_data["tag_x"] = static_cast<int>(encoder_barcode_q_element_.tag_x_b);
+    sensor_data["tag_y"] = static_cast<uint32_t>(encoder_barcode_q_element_.tag_y_b);
+    
+    //std::cout << "sensor_time_b : " << encoder_barcode_q_element_.sensor_time_b << std::endl;
+    //std::cout << "decode_time_b : " << encoder_barcode_q_element_.decode_time_b << std::endl;
+    //std::cout << "tag_x_b : " << encoder_barcode_q_element_.tag_x_b << std::endl;
+    //std::cout << "tag_y_b : " << encoder_barcode_q_element_.tag_y_b << std::endl;
+    
+    
 
     // logger_->debug("Data Read Sensor 2");
 

@@ -5,7 +5,7 @@ GlsBarcode::GlsBarcode(int barcode_id, int barcode_base_id){
 
 	barcode_sockets_ = std::make_shared<BarcodeSockets>(barcode_id, barcode_base_id);
 	
-	// logger_ = spdlog::get("actuator_interface")->clone("motor");
+	 logger_ = spdlog::get("actuator_interface")->clone("gls_barcode");
 	
 	logger_->info("Motor Sockets ptr in Motor constructor: {}", barcode_sockets_);
 
@@ -414,10 +414,10 @@ void GlsBarcode::get_x_y_ang_time(uint8_t* result, double* x, double* y, double*
 }
 
 int GlsBarcode::barcodeFeedback(int barcode_id, GlsBarcode::feedback_s *feedback_s_b){
+	//gls_request(barcode_id);
 
 	err_pdo_ = gls_data_read(x_fb_, y_fb_, ang_fb_, sensor_time_fb_, decode_time_fb_, tag_x_fb_, tag_y_fb_, &flag_b_, 1);
-
-	if (err_pdo_ = 0){
+	if (err_pdo_ == 0){
 		feedback_s_b->x_b= x_fb_[0];
 		feedback_s_b->y_b= y_fb_[0];
 		feedback_s_b->ang_b= ang_fb_[0];

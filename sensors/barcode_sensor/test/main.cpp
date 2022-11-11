@@ -1,12 +1,16 @@
 #include <barcode_sensor/barcode_sensor.hpp>
 #include <thread>
 #include <gls_barcode.hpp>
+#include "spdlog/spdlog.h"
+#include "spdlog/async.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/sinks/rotating_file_sink.h"
 
 
 using namespace std;
 
 BarcodeSensor::BarcodeSensorSPtr barcode_sensor_1;
-
+std::shared_ptr<spdlog::logger> logger_;
 // void read_data() {
 
 //     while (true) {
@@ -21,8 +25,18 @@ BarcodeSensor::BarcodeSensorSPtr barcode_sensor_1;
 Json::Value barcode_data_1;
 
 int main() {
-
-    barcode_sensor_1 = std::make_shared<BarcodeSensor>(12,1152);
+	 spdlog::init_thread_pool(8192, 1);
+    auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt >();
+    console_sink->set_level(spdlog::level::info);
+    auto rotating_sink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>("/data/logs/robot_logs/actuator_interface_logs/motor_interface_logs.txt", 1024*1024*100, 3);
+    rotating_sink->set_level(spdlog::level::debug);
+    std::vector<spdlog::sink_ptr> sinks {console_sink,rotating_sink};
+    auto root_logger = std::make_shared<spdlog::async_logger>("actuator_interface", sinks.begin(), sinks.end(), spdlog::thread_pool(), spdlog::async_overflow_policy::block);
+    root_logger->set_level(spdlog::level::debug);
+    spdlog::register_logger(root_logger);
+    
+    
+    barcode_sensor_1 = std::make_shared<BarcodeSensor>(1,1152);
 
     while(true){
         std::this_thread::sleep_for(std::chrono::milliseconds(5));
